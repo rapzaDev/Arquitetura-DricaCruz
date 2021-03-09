@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, useState } from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import { Container } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -7,8 +7,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const Button: React.FC<ButtonProps> = ({ children, ...rest }) => {
-  const [isBig, setIsBig] = useState(false);
-  const [isPrimary, setIsPrimary] = useState(false);
+  const isBig = false;
+  const isPrimary = false;
 
   return (
     <Container type="button" isBig={isBig} isPrimary={isPrimary} {...rest}>
