@@ -7,7 +7,6 @@ import Bars from '../../images/bars.svg';
 
 export const Nav = styled.nav`
   height: 60px;
-  background: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;

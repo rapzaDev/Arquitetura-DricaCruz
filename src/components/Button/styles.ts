@@ -22,7 +22,7 @@ export const Container = styled.button<IButtonProps>`
     props.isPrimary &&
     css`
       background: #000d1a;
-      color: #fff;
+      color: #f2f2f0;
     `}
 
   ${props =>
@@ -33,6 +33,6 @@ export const Container = styled.button<IButtonProps>`
     `}
 
   &:hover {
-    background: ${shade(0.3, '#cd853f')};
+    background: ${shade(0.3, '#f2f2f0')};
   }
 `;
