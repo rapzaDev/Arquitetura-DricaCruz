@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 import ImageOne from '../../images/image1.jpg';
@@ -66,11 +66,10 @@ const Hero: React.FC = () => {
   const [slides, setIslides] = useState<ISlides[]>([]);
 
   const { length } = slides;
-  const timeout = useRef(null);
 
   useEffect(() => {
     setIslides(data);
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     const nextSlide = () => {
