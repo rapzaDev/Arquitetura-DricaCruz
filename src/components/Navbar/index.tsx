@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button';
 import { Nav, Logo, MenuBars, NavMenu, NavMenuLinks, NavBtn } from './styles';
 
@@ -52,7 +53,9 @@ const Navbar: React.FC<INavProps> = ({ toggle }) => {
       </NavMenu>
 
       <NavBtn>
-        <Button isPrimary>Contato</Button>
+        <Link to="/contato">
+          <Button isPrimary>Contato</Button>
+        </Link>
       </NavBtn>
     </Nav>
   );

@@ -1,34 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button';
-import { Container, ColumnLeft, ColumnRigth, Section } from './styles';
+import {
+  Container,
+  ColumnLeft,
+  ColumnRigth,
+  Section,
+  ContainerBlue,
+  ContainerLeft,
+} from './styles';
 
-interface ISectionData {
-  name: string;
-  description: string;
-  text: string;
-}
+import Data from './data';
 
 const InfoSection: React.FC = () => {
-  const sectionData: ISectionData = {
-    name: 'Drieli Cruz Arquitetura',
-    description: 'Arquiteta e Urbanista',
-    text:
-      'Física especializada em Arquitetura e Urbanismo com foco em interiores. Recém formada priorizando os diferenciais no mercado de trabalho',
-  };
+  const sectionData = Data;
 
   return (
     <Section>
       <Container>
-        <ColumnLeft>
-          <h1>heading</h1>
-          <p>paragraph</p>
-          <Button isPrimary>
-            <Link to="/homes">label</Link>
-          </Button>
-        </ColumnLeft>
-        <ColumnRigth>
-          <img src="" alt="home" />
+        <ContainerBlue>
+          <ContainerLeft>
+            <ColumnLeft reverse={sectionData.reverse}>
+              <h1>
+                {sectionData.description} - {sectionData.name}
+              </h1>
+              <p>{sectionData.text}</p>
+              <Link to="/curriculo">
+                <Button isBig>{sectionData.btnlabel}</Button>
+              </Link>
+            </ColumnLeft>
+          </ContainerLeft>
+        </ContainerBlue>
+        <ColumnRigth reverse={sectionData.reverse}>
+          <img src={sectionData.image} alt="Drieli" />
         </ColumnRigth>
       </Container>
     </Section>

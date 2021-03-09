@@ -23,7 +23,6 @@ import {
 
 interface ISlides {
   title: string;
-  price: string;
   path: string;
   label: string;
   image: string;
@@ -34,7 +33,6 @@ const Hero: React.FC = () => {
   const data: ISlides[] = [
     {
       title: 'Luxury Villa in Bali, Indonesia',
-      price: '$4,280,000',
       path: '/homes',
       label: 'View Home',
       image: ImageOne,
@@ -42,7 +40,6 @@ const Hero: React.FC = () => {
     },
     {
       title: 'House in San Jose, Costa Rica',
-      price: '$2,860,000',
       path: '/homes',
       label: 'View Home',
       image: ImageTwo,
@@ -50,7 +47,6 @@ const Hero: React.FC = () => {
     },
     {
       title: 'House in Calabasas, California',
-      price: '$8,420,000',
       path: '/homes',
       label: 'View Home',
       image: ImageThree,
@@ -58,7 +54,6 @@ const Hero: React.FC = () => {
     },
     {
       title: 'House in Houston, Texas',
-      price: '$6,660,000',
       path: '/homes',
       label: 'View Home',
       image: ImageFour,
@@ -113,7 +108,7 @@ const Hero: React.FC = () => {
                     <HeroImage src={slide.image} alt={slide.alt} />
                     <HeroContent>
                       <h1>{slide.title}</h1>
-                      <p>{slide.price}</p>
+                      {/* <p>{slide.price}</p> */}
                       <Button isPrimary>
                         <Link to={slide.path}>
                           {slide.label}

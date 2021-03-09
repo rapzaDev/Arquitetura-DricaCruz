@@ -9,7 +9,7 @@ interface IButtonProps {
 export const Container = styled.button<IButtonProps>`
   background: #cd853f;
   height: 46px;
-  /* padding: 14px 24px; */
+  padding: 14px 24px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ export const Container = styled.button<IButtonProps>`
   ${props =>
     props.isBig &&
     css`
-      padding: 16px 40px;
+      /* padding: 16px 40px; */
       font-size: 20px;
     `}
 
