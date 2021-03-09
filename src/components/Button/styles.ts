@@ -9,7 +9,7 @@ interface IButtonProps {
 export const Container = styled.button<IButtonProps>`
   background: #cd853f;
   height: 46px;
-  padding: 14px 24px;
+  /* padding: 14px 24px; */
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -33,6 +33,6 @@ export const Container = styled.button<IButtonProps>`
     `}
 
   &:hover {
-    background: ${shade(0.3, '#f2f2f0')};
+    background: ${shade(0.3, '#cd853f')};
   }
 `;

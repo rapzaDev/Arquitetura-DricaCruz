@@ -1,26 +1,61 @@
 import React from 'react';
 import Button from '../Button';
-import { Nav, Logo, MenuBars, NavMenu, Linky, NavBtn } from './styles';
+import { Nav, Logo, MenuBars, NavMenu, NavMenuLinks, NavBtn } from './styles';
 
-const Navbar: React.FC = () => (
-  <>
+interface INavitem {
+  title: string;
+  link: string;
+}
+
+interface INavProps {
+  toggle(): void;
+}
+
+const Navbar: React.FC<INavProps> = ({ toggle }) => {
+  const navData: INavitem[] = [
+    {
+      title: 'Quem Somos',
+      link: '/quemsomos',
+    },
+    {
+      title: 'Nossos Serviços',
+      link: '/servicos',
+    },
+    {
+      title: 'Arquitetura',
+      link: '/arquitetura',
+    },
+    {
+      title: 'Interiores',
+      link: '/interiores',
+    },
+    {
+      title: 'Consultoria',
+      link: '/consultoria',
+    },
+    {
+      title: 'Regularização',
+      link: '/regularizacao',
+    },
+  ];
+
+  return (
     <Nav>
       <Logo to="/">DC</Logo>
-      <MenuBars />
+      <MenuBars onClick={toggle} />
       <NavMenu>
-        <Linky to="/quemsomos">Quem Somos</Linky>
-        <Linky to="/servicos">NossosServicos</Linky>
-        <Linky to="/arquitetura">Arquitetura</Linky>
-        <Linky to="/interiores">Interiores</Linky>
-        <Linky to="/consultoria">Consultoria</Linky>
-        <Linky to="/regularizacao">Regularizacao</Linky>
+        {navData.map((item, index) => (
+          <NavMenuLinks to={item.link} key={index}>
+            {item.title}
+          </NavMenuLinks>
+        ))}
       </NavMenu>
 
       <NavBtn>
         <Button isPrimary>Contato</Button>
       </NavBtn>
     </Nav>
-  </>
-);
+  );
+};
 
 export default Navbar;

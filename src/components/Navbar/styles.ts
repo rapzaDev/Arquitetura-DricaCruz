@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { FaBars } from 'react-icons/fa';
-
 import Bars from '../../images/bars.svg';
 
 export const Nav = styled.nav`
@@ -47,7 +45,7 @@ export const NavMenu = styled.div`
   }
 `;
 
-export const Linky = styled(Link)`
+export const NavMenuLinks = styled(Link)`
   color: #fff;
   display: flex;
   align-items: center;

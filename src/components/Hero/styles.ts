@@ -86,6 +86,16 @@ export const HeroContent = styled.div`
 
   h1 {
     font-size: clamp(1rem, 8vw, 2rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   }
 
   a {
@@ -101,7 +111,9 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const Arrow = styled(IoMdArrowRoundForward)``;
+export const Arrow = styled(IoMdArrowRoundForward)`
+  margin-left: 0.5rem;
+`;
 
 export const ArrowButtons = css`
   width: 50px;

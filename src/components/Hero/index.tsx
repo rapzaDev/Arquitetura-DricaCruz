@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 import ImageOne from '../../images/image1.jpg';
@@ -66,11 +66,40 @@ const Hero: React.FC = () => {
     },
   ];
 
+  const [current, setCurrent] = useState(0);
+
   const [slides, setIslides] = useState<ISlides[]>([]);
+
+  const { length } = slides;
+  const timeout = useRef(null);
 
   useEffect(() => {
     setIslides(data);
-  }, [slides, data]);
+  }, []);
+
+  useEffect(() => {
+    const nextSlide = () => {
+      setCurrent(currentItem =>
+        currentItem === length - 1 ? 0 : currentItem + 1,
+      );
+    };
+
+    const timeoutNext = setTimeout(nextSlide, 4200);
+
+    return function () {
+      if (timeoutNext) {
+        clearTimeout(timeoutNext);
+      }
+    };
+  }, [current, length]);
+
+  const nextSlide = useCallback(() => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  }, [current, length]);
+
+  const prevSlide = useCallback(() => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  }, [current, length]);
 
   return (
     <Container>
@@ -79,26 +108,28 @@ const Hero: React.FC = () => {
           {slides.map((slide, index) => {
             return (
               <HeroSlide key={index}>
-                <HeroSlider>
-                  <HeroImage src={slide.image} alt={slide.alt} />
-                  <HeroContent>
-                    <h1>{slide.title}</h1>
-                    <p>{slide.price}</p>
-                    <Button isPrimary>
-                      <Link to={slide.path}>
-                        {slide.label}
-                        <Arrow />
-                      </Link>
-                    </Button>
-                  </HeroContent>
-                </HeroSlider>
+                {index === current && (
+                  <HeroSlider>
+                    <HeroImage src={slide.image} alt={slide.alt} />
+                    <HeroContent>
+                      <h1>{slide.title}</h1>
+                      <p>{slide.price}</p>
+                      <Button isPrimary>
+                        <Link to={slide.path}>
+                          {slide.label}
+                          <Arrow />
+                        </Link>
+                      </Button>
+                    </HeroContent>
+                  </HeroSlider>
+                )}
               </HeroSlide>
             );
           })}
 
           <SliderButtons>
-            <PrevArrow />
-            <NextArrow />
+            <PrevArrow onClick={prevSlide} />
+            <NextArrow onClick={nextSlide} />
           </SliderButtons>
         </HeroWrapper>
       </HeroSection>
