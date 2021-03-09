@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
 
     const timeoutNext = setTimeout(nextSlide, 4200);
 
-    return function () {
+    return () => {
       if (timeoutNext) {
         clearTimeout(timeoutNext);
       }
