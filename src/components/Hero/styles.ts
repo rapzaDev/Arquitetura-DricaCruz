@@ -118,15 +118,17 @@ export const Arrow = styled(IoMdArrowRoundForward)`
 export const ArrowButtons = css`
   width: 50px;
   height: 50px;
-  color: #fff;
-  background: #000d1a;
+  color: #f9eae5;
+  /* background: #5a3931; */
+  background: transparent;
   border-radius: 50px;
+  border: solid 0.1rem;
   padding: 10px;
   margin-right: 1rem;
   user-select: none;
 
   &:hover {
-    background: ${shade(0.3, '#cd853f')};
+    background: ${shade(0.3, '#5a3931')};
   }
 `;
 

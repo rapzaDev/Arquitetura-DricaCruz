@@ -21,7 +21,20 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 800px;
 
-  animation: ${appearFromLeft} 1s;
+  background: #5a3931;
+
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+  /* border: 15px solid white; */
+
+  &::marker {
+    animation: ${appearFromLeft} 1.5s;
+  }
+
+  /* animation: ${appearFromLeft} 1s; */
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -32,13 +45,17 @@ export const Section = styled.section`
   width: 100%;
   height: 100%;
   padding: 4rem 0rem;
+  background: #fff;
+  /* margin-bottom: -10rem; */
+  display: flex;
+  justify-content: center;
 `;
 
 export const ColumnLeft = styled.div<IDataProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   line-height: 1.4;
   padding: 1rem 2rem;
   order: 1;
@@ -52,10 +69,16 @@ export const ColumnLeft = styled.div<IDataProps>`
   h1 {
     margin-bottom: 1rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
+    color: #5a3931;
   }
 
   p {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    color: #5a3931;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 
@@ -97,17 +120,36 @@ export const ColumnRigth = styled.div<IDataProps>`
 `;
 
 export const ContainerLeft = styled.div`
-  background: #fff;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #f9eae5;
   width: 100%;
-  height: 40%;
+  height: 98%;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    /* margin-top: -5rem; */
+
+    img {
+      height: 700px;
+      margin-bottom: -15rem;
+    }
+  }
 `;
 
-export const ContainerBlue = styled.div`
+export const ContainerBrown = styled.div`
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 99%;
+  padding-top: 9px;
 
   align-items: center;
+`;
 
-  background: #000d1a;
+export const Logo = styled.img`
+  height: 600px;
+  margin-bottom: -15rem;
 `;

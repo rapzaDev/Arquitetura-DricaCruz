@@ -17,6 +17,10 @@ export const Nav = styled.nav`
 export const Logo = styled(Link)`
   color: #fff;
   text-decoration: none;
+  border: solid 0.1rem;
+  padding: 0.45rem;
+  border-radius: 50%;
+  font-size: 16px;
 `;
 
 export const MenuBars = styled.i`

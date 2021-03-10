@@ -7,7 +7,7 @@ interface IButtonProps {
 }
 
 export const Container = styled.button<IButtonProps>`
-  background: #cd853f;
+  background: transparent;
   height: 46px;
   padding: 14px 24px;
   width: 100%;
@@ -15,24 +15,30 @@ export const Container = styled.button<IButtonProps>`
   justify-content: center;
 
   font-size: 14px;
-  border: 0;
+  border: 0.2rem;
   transition: background-color 0.2s;
 
   ${props =>
     props.isPrimary &&
     css`
-      background: #000d1a;
-      color: #f2f2f0;
+      border: solid 0.1rem;
+      color: #fff;
     `}
 
   ${props =>
     props.isBig &&
     css`
-      /* padding: 16px 40px; */
+      display: flex;
+      /* border: solid 0.1rem; */
       font-size: 20px;
+      justify-content: center;
+      color: #f9eae5;
+
+      background: #5a3931;
+      text-decoration: none;
     `}
 
   &:hover {
-    background: ${shade(0.3, '#cd853f')};
+    background: ${shade(0.4, '#5a3931')};
   }
 `;

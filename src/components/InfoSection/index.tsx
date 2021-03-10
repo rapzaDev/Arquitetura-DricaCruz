@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import Button from '../Button';
 import {
@@ -6,9 +7,12 @@ import {
   ColumnLeft,
   ColumnRigth,
   Section,
-  ContainerBlue,
+  ContainerBrown,
   ContainerLeft,
+  Logo,
 } from './styles';
+
+import logoDC from '../../images/logo.jpg';
 
 import Data from './data';
 
@@ -18,7 +22,7 @@ const InfoSection: React.FC = () => {
   return (
     <Section>
       <Container>
-        <ContainerBlue>
+        <ContainerBrown>
           <ContainerLeft>
             <ColumnLeft reverse={sectionData.reverse}>
               <h1>
@@ -29,8 +33,10 @@ const InfoSection: React.FC = () => {
                 <Button isBig>{sectionData.btnlabel}</Button>
               </Link>
             </ColumnLeft>
+
+            <Logo src={logoDC} />
           </ContainerLeft>
-        </ContainerBlue>
+        </ContainerBrown>
         <ColumnRigth reverse={sectionData.reverse}>
           <img src={sectionData.image} alt="Drieli" />
         </ColumnRigth>
