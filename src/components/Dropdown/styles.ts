@@ -12,7 +12,7 @@ export const DropdownContainer = styled.div<IDropdownProps>`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #cd853f;
+  background: #5a3931;
   display: grid;
   align-items: center;
   top: -100%;
@@ -40,10 +40,13 @@ export const Icon = styled.div`
   background: transparent;
   font-size: 2rem;
   outline: none;
+
+  cursor: pointer;
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #000d1a;
+  color: #f9eae5;
+  cursor: pointer;
 `;
 
 export const DropdownWrapper = styled.div``;
@@ -67,14 +70,14 @@ export const DropdownLink = styled(Link)`
   justify-content: space-between;
   font-size: 1.5rem;
   list-style: none;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   margin-top: 3rem;
 
   color: #f2f2f0;
   text-decoration: none;
 
   &:hover {
-    color: #000d1a;
+    opacity: 0.4;
   }
 `;
 
@@ -89,10 +92,12 @@ export const BtnWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f9eae5;
+    border: 0;
   }
 
   a {
-    color: #f2f2f0;
+    color: #5a3931;
     text-decoration: none;
   }
 `;

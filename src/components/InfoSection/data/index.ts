@@ -14,7 +14,7 @@ const SectionData: ISectionData = {
   name: 'Drieli Cruz',
   description: 'Arquiteta e Urbanista',
   text:
-    'Física especializada em Arquitetura e Urbanismo com foco em interiores. Recém formada priorizando os diferenciais no mercado de trabalho',
+    'Física especializada em Arquitetura e Urbanismo com foco em interiores. Recém formada priorizando os diferenciais no mercado de trabalho.',
   btnlabel: 'Currículo',
   image: imgDC,
   reverse: false,
