@@ -1,11 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
-import ImageOne from '../../images/image1.jpg';
-import ImageTwo from '../../images/image2.jpg';
-import ImageThree from '../../images/image3.jpg';
-import ImageFour from '../../images/image4.jpg';
 import Button from '../Button';
+
+import HeroData from './data';
 
 import {
   Container,
@@ -30,36 +28,7 @@ interface ISlides {
 }
 
 const Hero: React.FC = () => {
-  const data: ISlides[] = [
-    {
-      title: 'Luxury Villa in Bali, Indonesia',
-      path: '/homes',
-      label: 'View Home',
-      image: ImageOne,
-      alt: 'House',
-    },
-    {
-      title: 'House in San Jose, Costa Rica',
-      path: '/homes',
-      label: 'View Home',
-      image: ImageTwo,
-      alt: 'House',
-    },
-    {
-      title: 'House in Calabasas, California',
-      path: '/homes',
-      label: 'View Home',
-      image: ImageThree,
-      alt: 'House',
-    },
-    {
-      title: 'House in Houston, Texas',
-      path: '/homes',
-      label: 'View Home',
-      image: ImageFour,
-      alt: 'House',
-    },
-  ];
+  const data = HeroData;
 
   const [current, setCurrent] = useState(0);
 
@@ -67,9 +36,7 @@ const Hero: React.FC = () => {
 
   const { length } = slides;
 
-  useEffect(() => {
-    setIslides(data);
-  }, [data]);
+  setIslides(data);
 
   useEffect(() => {
     const nextSlide = () => {
