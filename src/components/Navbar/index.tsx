@@ -1,61 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Button from '../Button';
-import { Nav, Logo, MenuBars, NavMenu, NavMenuLinks, NavBtn } from './styles';
-
-interface INavitem {
-  title: string;
-  link: string;
-}
+import {
+  Nav,
+  NavLogo,
+  MenuBars,
+  NavMenu,
+  NavMenuLinks,
+  NavBtn,
+  BtnLink,
+} from './styles';
 
 interface INavProps {
   toggle(): void;
 }
 
 const Navbar: React.FC<INavProps> = ({ toggle }) => {
-  const navData: INavitem[] = [
-    {
-      title: 'Quem Somos',
-      link: '/quemsomos',
-    },
-    {
-      title: 'Nossos Serviços',
-      link: '/servicos',
-    },
-    {
-      title: 'Arquitetura',
-      link: '/arquitetura',
-    },
-    {
-      title: 'Interiores',
-      link: '/interiores',
-    },
-    {
-      title: 'Consultoria',
-      link: '/consultoria',
-    },
-    {
-      title: 'Regularização',
-      link: '/regularizacao',
-    },
-  ];
-
   return (
     <Nav>
-      <Logo to="/">DC</Logo>
+      <NavLogo to="/">DC</NavLogo>
       <MenuBars onClick={toggle} />
       <NavMenu>
-        {navData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
-            {item.title}
-          </NavMenuLinks>
-        ))}
+        <NavMenuLinks to="quemsomos">Quem Somos</NavMenuLinks>
+        <NavMenuLinks to="servicos">Nossos Serviços</NavMenuLinks>
+        <NavMenuLinks to="arquitetura">Arquitetura</NavMenuLinks>
+        <NavMenuLinks to="interiores">Interiores</NavMenuLinks>
+        <NavMenuLinks to="consultoria">Consultoria</NavMenuLinks>
+        <NavMenuLinks to="regularizacao">Regularização</NavMenuLinks>
+        <NavMenuLinks to="virtual">Realidade Virtual</NavMenuLinks>
+        <NavMenuLinks to="drieli">Drieli Cruz</NavMenuLinks>
       </NavMenu>
 
       <NavBtn>
-        <Link to="/contato">
+        <BtnLink to="/contato">
           <Button isPrimary>Contato</Button>
-        </Link>
+        </BtnLink>
       </NavBtn>
     </Nav>
   );

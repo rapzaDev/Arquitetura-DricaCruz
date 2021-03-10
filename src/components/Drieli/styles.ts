@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+import { Link as LinkR } from 'react-router-dom';
 
 interface IDataProps {
   reverse: boolean;
@@ -21,18 +22,10 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 800px;
 
-  background: #5a3931;
-
   background-size: cover;
   background-position: center center;
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.6);
   transition: box-shadow 0.5s;
   will-change: transform;
-  /* border: 15px solid white; */
-
-  /* &:hover {
-    animation: ${appearFromLeft} 1.5s;
-  } */
 
   animation: ${appearFromLeft} 1s;
 
@@ -50,9 +43,7 @@ export const Container = styled.div`
 export const Section = styled.section`
   width: 100%;
   height: 100%;
-  padding: 4rem 0rem;
   background: #fff;
-  /* margin-bottom: -10rem; */
   display: flex;
   justify-content: center;
 `;
@@ -93,6 +84,8 @@ export const ColumnLeft = styled.div<IDataProps>`
     /* width: 100%; */
   }
 `;
+
+export const InfoLink = styled(LinkR)``;
 
 export const ColumnRigth = styled.div<IDataProps>`
   padding: 1rem 2rem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import Button from '../Button';
 import {
   DropdownContainer,
@@ -9,12 +9,8 @@ import {
   DropdownMenu,
   DropdownLink,
   BtnWrap,
+  BtnLink,
 } from './styles';
-
-interface IMenudata {
-  title: string;
-  link: string;
-}
 
 interface IDropdownProps {
   isOpen: boolean;
@@ -22,33 +18,6 @@ interface IDropdownProps {
 }
 
 const Dropdown: React.FC<IDropdownProps> = ({ isOpen, toggle }) => {
-  const menuData: IMenudata[] = [
-    {
-      title: 'Quem Somos',
-      link: '/quemsomos',
-    },
-    {
-      title: 'Nossos Serviços',
-      link: '/servicos',
-    },
-    {
-      title: 'Arquitetura',
-      link: '/arquitetura',
-    },
-    {
-      title: 'Interiores',
-      link: '/interiores',
-    },
-    {
-      title: 'Consultoria',
-      link: '/consultoria',
-    },
-    {
-      title: 'Regularização',
-      link: '/regularizacao',
-    },
-  ];
-
   return (
     <DropdownContainer isOpen={isOpen} toggle={toggle}>
       <Icon onClick={toggle}>
@@ -56,16 +25,32 @@ const Dropdown: React.FC<IDropdownProps> = ({ isOpen, toggle }) => {
       </Icon>
       <DropdownWrapper>
         <DropdownMenu>
-          {menuData.map((item, index) => (
-            <DropdownLink to={item.link} key={index}>
-              {item.title}
-            </DropdownLink>
-          ))}
+          <DropdownLink to="quemsomos" onClick={toggle}>
+            Quem Somos
+          </DropdownLink>
+          <DropdownLink to="servicos" onClick={toggle}>
+            Nossos Serviços
+          </DropdownLink>
+          <DropdownLink to="arquitetura" onClick={toggle}>
+            Arquitetura
+          </DropdownLink>
+          <DropdownLink to="interiores" onClick={toggle}>
+            Interiores
+          </DropdownLink>
+          <DropdownLink to="consultoria" onClick={toggle}>
+            Consultoria
+          </DropdownLink>
+          <DropdownLink to="regularizacao" onClick={toggle}>
+            Regularização
+          </DropdownLink>
+          <DropdownLink to="virtual" onClick={toggle}>
+            Realidade Virtual
+          </DropdownLink>
         </DropdownMenu>
 
         <BtnWrap>
           <Button isPrimary isBig>
-            <Link to="/contato">Entre em contato</Link>
+            <BtnLink to="/contato">Entre em contato</BtnLink>
           </Button>
         </BtnWrap>
       </DropdownWrapper>

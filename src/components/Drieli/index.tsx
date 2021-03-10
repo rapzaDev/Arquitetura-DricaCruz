@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
 import Button from '../Button';
 import {
   Container,
   ColumnLeft,
+  InfoLink,
   ColumnRigth,
   Section,
   ContainerBrown,
@@ -17,7 +17,7 @@ import logoDC from '../../images/logoDrica.jpg';
 
 import Data from './data';
 
-const InfoSection: React.FC = () => {
+const Drieli: React.FC = () => {
   const sectionData = Data;
 
   return (
@@ -30,9 +30,9 @@ const InfoSection: React.FC = () => {
                 {sectionData.description} - {sectionData.name}
               </h1>
               <p>{sectionData.text}</p>
-              <Link to="/curriculo">
+              <InfoLink to="/curriculo">
                 <Button isBig>{sectionData.btnlabel}</Button>
-              </Link>
+              </InfoLink>
             </ColumnLeft>
 
             <Logo src={logoDC} />
@@ -46,4 +46,4 @@ const InfoSection: React.FC = () => {
   );
 };
 
-export default InfoSection;
+export default Drieli;

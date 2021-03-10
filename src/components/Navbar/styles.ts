@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link as LinkR } from 'react-router-dom';
+import { Link as LinkS } from 'react-scroll';
 
 import Bars from '../../images/bars.svg';
 
@@ -14,17 +15,19 @@ export const Nav = styled.nav`
   width: 100%;
 `;
 
-export const Logo = styled(Link)`
+export const NavLogo = styled(LinkR)`
   color: #fff;
   text-decoration: none;
   border: solid 0.1rem;
   padding: 0.45rem;
   border-radius: 50%;
   font-size: 16px;
+  font-family: 'Playfair 400';
 `;
 
 export const MenuBars = styled.i`
   display: none;
+  cursor: pointer;
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -49,13 +52,18 @@ export const NavMenu = styled.div`
   }
 `;
 
-export const NavMenuLinks = styled(Link)`
+export const NavMenuLinks = styled(LinkS)`
   color: #fff;
   display: flex;
   align-items: center;
   padding: 0 1rem;
   height: 100%;
   text-decoration: none;
+  cursor: pointer;
+
+  &:active {
+    border-bottom: 3px solid #fff;
+  }
 `;
 
 export const NavBtn = styled.div`
@@ -67,3 +75,5 @@ export const NavBtn = styled.div`
     display: none;
   }
 `;
+
+export const BtnLink = styled(LinkS)``;

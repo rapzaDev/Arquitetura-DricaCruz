@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link as LinkR } from 'react-router-dom';
+import { Link as LinkS } from 'react-scroll';
 import { FaTimes } from 'react-icons/fa';
 
 interface IDropdownProps {
@@ -63,7 +64,7 @@ export const DropdownMenu = styled.div`
   }
 `;
 
-export const DropdownLink = styled(Link)`
+export const DropdownLink = styled(LinkS)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,6 +76,7 @@ export const DropdownLink = styled(Link)`
 
   color: #f2f2f0;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.4;
@@ -101,3 +103,5 @@ export const BtnWrap = styled.div`
     text-decoration: none;
   }
 `;
+
+export const BtnLink = styled(LinkR)``;
