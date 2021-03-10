@@ -19,24 +19,12 @@ import {
   NextArrow,
 } from './styles';
 
-interface ISlides {
-  title: string;
-  path: string;
-  label: string;
-  image: string;
-  alt: string;
-}
-
 const Hero: React.FC = () => {
   const data = HeroData;
 
   const [current, setCurrent] = useState(0);
 
-  const [slides, setIslides] = useState<ISlides[]>([]);
-
-  const { length } = slides;
-
-  setIslides(data);
+  const { length } = data;
 
   useEffect(() => {
     const nextSlide = () => {
@@ -66,7 +54,7 @@ const Hero: React.FC = () => {
     <Container>
       <HeroSection>
         <HeroWrapper>
-          {slides.map((slide, index) => {
+          {data.map((slide, index) => {
             return (
               <HeroSlide key={index}>
                 {index === current && (
