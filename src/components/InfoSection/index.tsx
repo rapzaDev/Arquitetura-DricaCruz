@@ -12,7 +12,8 @@ import {
   Logo,
 } from './styles';
 
-import logoDC from '../../images/logo.jpg';
+// import logoDC from '../../images/logo.jpg';
+import logoDC from '../../images/logoDrica.jpg';
 
 import Data from './data';
 
@@ -37,7 +38,7 @@ const InfoSection: React.FC = () => {
             <Logo src={logoDC} />
           </ContainerLeft>
         </ContainerBrown>
-        <ColumnRigth reverse={sectionData.reverse}>
+        <ColumnRigth className="direita" reverse={sectionData.reverse}>
           <img src={sectionData.image} alt="Drieli" />
         </ColumnRigth>
       </Container>

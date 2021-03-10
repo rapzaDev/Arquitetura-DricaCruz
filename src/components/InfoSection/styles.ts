@@ -30,14 +30,20 @@ export const Container = styled.div`
   will-change: transform;
   /* border: 15px solid white; */
 
-  &::marker {
+  /* &:hover {
     animation: ${appearFromLeft} 1.5s;
-  }
+  } */
 
-  /* animation: ${appearFromLeft} 1s; */
+  animation: ${appearFromLeft} 1s;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+
+    .direita {
+      width: 0;
+
+      margin-bottom: -1rem;
+    }
   }
 `;
 
@@ -80,6 +86,12 @@ export const ColumnLeft = styled.div<IDataProps>`
   a {
     text-decoration: none;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+    padding: 0 5.5rem;
+    /* width: 100%; */
+  }
 `;
 
 export const ColumnRigth = styled.div<IDataProps>`
@@ -88,8 +100,6 @@ export const ColumnRigth = styled.div<IDataProps>`
   justify-content: center;
   align-items: center;
   order: 2;
-
-  /* background: #000d1a; */
 
   ${props =>
     props.reverse &&
@@ -111,11 +121,6 @@ export const ColumnRigth = styled.div<IDataProps>`
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    @media screen and (max-width: 768) {
-      width: 90%;
-      height: 90%;
-    }
   }
 `;
 
@@ -131,11 +136,11 @@ export const ContainerLeft = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    /* margin-top: -5rem; */
+    justify-content: center;
 
     img {
-      height: 700px;
-      margin-bottom: -15rem;
+      /* height: 700px; */
+      padding-bottom: 3rem;
     }
   }
 `;
@@ -152,4 +157,5 @@ export const ContainerBrown = styled.div`
 export const Logo = styled.img`
   height: 600px;
   margin-bottom: -15rem;
+  margin-top: 4rem;
 `;
