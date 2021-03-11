@@ -67,15 +67,18 @@ export const ColumnLeft = styled.div<IDataProps>`
     margin-bottom: 1rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
     color: #5a3931;
+    font-family: 'PLayfair 700';
   }
 
   p {
     margin-bottom: 3rem;
     color: #5a3931;
+    font-family: 'PLayfair 400';
   }
 
   a {
     text-decoration: none;
+    font-family: 'PLayfair 400';
   }
 
   @media screen and (max-width: 768px) {
