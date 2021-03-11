@@ -45,7 +45,7 @@ export const MenuBars = styled.i`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -48px;
+  margin-right: -15px;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -56,7 +56,7 @@ export const NavMenuLinks = styled(LinkS)`
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 0.7rem;
   height: 100%;
   text-decoration: none;
   cursor: pointer;
