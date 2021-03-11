@@ -21,11 +21,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 800px;
-  background-size: cover;
-  background-position: center center;
-  transition: box-shadow 0.5s;
-  will-change: transform;
   animation: ${appearFromLeft} 1s;
+
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     .direita {
@@ -36,9 +33,8 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  width: 100%;
-  height: 100%;
-  background: #fff;
+  background: #5a3931;
+  border: solid 2rem #fff;
   display: flex;
   justify-content: center;
 `;

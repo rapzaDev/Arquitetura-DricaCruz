@@ -21,7 +21,7 @@ export const NavLogo = styled(LinkR)`
   border: solid 0.1rem;
   padding: 0.45rem;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 24px;
   font-family: 'Playfair 400';
 `;
 
