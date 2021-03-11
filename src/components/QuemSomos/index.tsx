@@ -11,7 +11,6 @@ import {
   TopLine,
   Heading,
   Subtitle,
-  // BtnWrap,
   ImgWrap,
   Img,
 } from './styles';

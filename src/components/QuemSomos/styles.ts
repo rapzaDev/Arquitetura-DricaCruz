@@ -20,14 +20,9 @@ interface ISubtitleProps {
 export const InfoContainer = styled.div<IContainerInfoProps>`
   color: #fff;
   background: ${props => (props.lightBg ? '#f9eae5' : '#5a3931')};
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
 
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    padding: 170px 0;
   }
 `;
 
@@ -78,17 +73,17 @@ export const TopLine = styled.p`
   color: #fff;
   font-size: 16px;
   line-height: 16px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 16px;
 `;
 
 export const Heading = styled.h1<IHeadingProps>`
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   font-size: 48px;
   font-family: 'PLayfair 700';
-  line-height: 1.1.%;
+  line-height: 1.1;
   font-weight: 600;
   color: ${props => (props.lightText ? '#f9eae5' : '#5a3931')};
 
@@ -99,7 +94,7 @@ export const Heading = styled.h1<IHeadingProps>`
 
 export const Subtitle = styled.p<ISubtitleProps>`
   max-width: 440px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 18px;
   font-family: 'PLayfair 400';
   line-height: 24px;

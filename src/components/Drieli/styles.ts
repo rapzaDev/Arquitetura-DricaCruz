@@ -21,20 +21,15 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 800px;
-
   background-size: cover;
   background-position: center center;
   transition: box-shadow 0.5s;
   will-change: transform;
-
   animation: ${appearFromLeft} 1s;
-
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-
     .direita {
       width: 0;
-
       margin-bottom: -1rem;
     }
   }
@@ -56,31 +51,26 @@ export const ColumnLeft = styled.div<IDataProps>`
   line-height: 1.4;
   padding: 1rem 2rem;
   order: 1;
-
   ${props =>
     props.reverse &&
     css`
       order: 2;
     `}
-
   h1 {
     margin-bottom: 1rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
     color: #5a3931;
     font-family: 'PLayfair 700';
   }
-
   p {
     margin-bottom: 3rem;
     color: #5a3931;
     font-family: 'PLayfair 400';
   }
-
   a {
     text-decoration: none;
     font-family: 'PLayfair 400';
   }
-
   @media screen and (max-width: 768px) {
     margin-bottom: 2rem;
     padding: 0 5.5rem;
@@ -96,23 +86,19 @@ export const ColumnRigth = styled.div<IDataProps>`
   justify-content: center;
   align-items: center;
   order: 2;
-
   ${props =>
     props.reverse &&
     css`
       order: 1;
     `}
-
   @media screen and (max-width: 768) {
     order: 1;
-
     ${props =>
       props.reverse &&
       css`
         order: 2;
       `}
   }
-
   img {
     width: 100%;
     height: 100%;
@@ -146,7 +132,6 @@ export const ContainerBrown = styled.div`
   width: 100%;
   height: 99%;
   padding-top: 9px;
-
   align-items: center;
 `;
 
