@@ -1,4 +1,4 @@
-import dricaSvg from '../../../images/svg-1.svg';
+import servicosSvg from '../../../images/svg-2.svg';
 
 interface IServicos {
   id: string;
@@ -6,10 +6,8 @@ interface IServicos {
   lightText: boolean;
   lightTextDesc: boolean;
   topLine: string;
-  headLine: string;
   paragraph1: string;
   paragraph2: string;
-  paragraph3: string;
   imgStart: boolean;
   img: string;
   alt: string;
@@ -24,15 +22,12 @@ const Servicos: IServicos = {
   lightText: false,
   lightTextDesc: true,
   topLine: 'Nossos Serviços',
-  headLine: 'Drieli Cruz Arquitetura',
   paragraph1:
-    'Inspirado nas emoções que surgem ao admirar uma bela arquitetura, nasceu a Drieli Cruz Arquitetura com a proposta de reverberar o que as construções nos transmitem de melhor',
+    'Na Drieli Cruz Arquitetura buscamos realizar aquela tão sonhada casa reproduzindo uma arquitetura pautada no conforto, funcionalidade e estética.',
   paragraph2:
-    'Com criatividade e amor pela profissão, nos lançamos no mercado desenvolvendo um trabalho singular e inovador, respeitando a personalidade e necessidades dos nossos clientes.',
-  paragraph3:
-    'Contrando nosso serviços, você estará ajudando a repercutir esse movimento de boas sensações através da construção e deixando o seu sonho sob os nossos cuidados, do princípio ao fim.',
+    'Então se sonha em construir, fazer reforma, regularizar ou deixar o seu cantinho com sua cara, clique no botão abaixo para saber mais sobre nossos serviços.',
   imgStart: true,
-  img: dricaSvg,
+  img: servicosSvg,
   alt: 'Car',
   dark: true,
   primary: true,

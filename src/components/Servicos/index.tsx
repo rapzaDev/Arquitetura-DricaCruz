@@ -8,7 +8,6 @@ import {
   Column2,
   TextWrapper,
   TopLine,
-  Heading,
   Subtitle,
   ImgWrap,
   Img,
@@ -20,10 +19,8 @@ interface IServicos {
   lightText: boolean;
   lightTextDesc: boolean;
   topLine: string;
-  headLine: string;
   paragraph1: string;
   paragraph2: string;
-  paragraph3: string;
   imgStart: boolean;
   img: string;
   alt: string;
@@ -37,12 +34,9 @@ const Servicos: React.FC<IServicos> = ({
   id,
   imgStart,
   topLine,
-  lightText,
-  headLine,
   darkText,
   paragraph1,
   paragraph2,
-  paragraph3,
   img,
   alt,
 }) => {
@@ -54,12 +48,8 @@ const Servicos: React.FC<IServicos> = ({
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{paragraph1}</Subtitle>
                 <Subtitle darkText={darkText}>{paragraph2}</Subtitle>
-                <Subtitle className="lastSubtitle" darkText={darkText}>
-                  {paragraph3}
-                </Subtitle>
               </TextWrapper>
             </Column1>
             <Column2>
