@@ -20,6 +20,11 @@ interface ISubtitleProps {
 export const InfoContainer = styled.div<IContainerInfoProps>`
   color: #fff;
   background: ${props => (props.lightBg ? '#f9eae5' : '#5a3931')};
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -29,7 +34,7 @@ export const InfoContainer = styled.div<IContainerInfoProps>`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 950px;
+  height: 860px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -65,12 +70,8 @@ export const Column2 = styled.div`
 
 export const TextWrapper = styled.div`
   max-width: 540px;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-bottom: 60px;
-
-  .lastSubtitle {
-    margin-bottom: 35px;
-  }
 `;
 
 export const TopLine = styled.p`
@@ -80,11 +81,11 @@ export const TopLine = styled.p`
   font-weight: 900;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom: 27px;
+  margin-bottom: 16px;
 `;
 
 export const Heading = styled.h1<IHeadingProps>`
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-size: 48px;
   font-family: 'PLayfair 700';
   line-height: 1.1.%;
@@ -98,8 +99,8 @@ export const Heading = styled.h1<IHeadingProps>`
 
 export const Subtitle = styled.p<ISubtitleProps>`
   max-width: 440px;
-  margin-bottom: 17px;
-  font-size: 20px;
+  margin-bottom: 1rem;
+  font-size: 18px;
   font-family: 'PLayfair 400';
   line-height: 24px;
   color: ${props => (props.darkText ? '#5a3931' : '#f9eae5')};
