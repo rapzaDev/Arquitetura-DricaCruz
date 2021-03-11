@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as LinkR } from 'react-router-dom';
 
 interface IContainerInfoProps {
   lightBg: boolean;
@@ -104,6 +105,27 @@ export const Subtitle = styled.p<ISubtitleProps>`
 export const BtnWrap = styled.div`
   display: flex;
   justify-content: flex-start;
+
+  button {
+    margin-top: 25px;
+  }
+`;
+
+export const ButtonLinkR = styled(LinkR)`
+  /* display: flex; */
+  text-decoration: none;
+  font-family: 'PLayfair 400';
+  color: #f9eae5;
+
+  button {
+    padding: 0 12rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    button {
+      padding: 0 8rem;
+    }
+  }
 `;
 
 export const ImgWrap = styled.div`

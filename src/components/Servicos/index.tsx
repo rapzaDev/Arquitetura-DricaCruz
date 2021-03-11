@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Button';
 
 import {
   InfoContainer,
@@ -9,6 +10,8 @@ import {
   TextWrapper,
   TopLine,
   Subtitle,
+  BtnWrap,
+  ButtonLinkR,
   ImgWrap,
   Img,
 } from './styles';
@@ -50,6 +53,12 @@ const Servicos: React.FC<IServicos> = ({
                 <TopLine>{topLine}</TopLine>
                 <Subtitle darkText={darkText}>{paragraph1}</Subtitle>
                 <Subtitle darkText={darkText}>{paragraph2}</Subtitle>
+
+                <BtnWrap>
+                  <ButtonLinkR to="/services">
+                    <Button isBig>Serviços</Button>
+                  </ButtonLinkR>
+                </BtnWrap>
               </TextWrapper>
             </Column1>
             <Column2>

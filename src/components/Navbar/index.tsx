@@ -27,7 +27,7 @@ const Navbar: React.FC<INavProps> = ({ toggle }) => {
       </NavMenu>
 
       <NavBtn>
-        <BtnLink to="/contato">
+        <BtnLink to="contato">
           <Button isPrimary>Contato</Button>
         </BtnLink>
       </NavBtn>

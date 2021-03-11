@@ -5,6 +5,7 @@ import {
   IoMdArrowForward,
 } from 'react-icons/io';
 import { shade } from 'polished';
+import { Link as LinkR } from 'react-router-dom';
 
 export const Container = styled.div``;
 
@@ -109,7 +110,13 @@ export const HeroContent = styled.div`
   button {
     max-width: 160px;
   }
+
+  .linkrouter {
+    max-width: 160px;
+  }
 `;
+
+export const LinkRouter = styled(LinkR)``;
 
 export const Arrow = styled(IoMdArrowRoundForward)`
   margin-left: 0.5rem;

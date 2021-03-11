@@ -34,7 +34,7 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   background: #5a3931;
-  border: solid 2rem #fff;
+
   display: flex;
   justify-content: center;
 `;

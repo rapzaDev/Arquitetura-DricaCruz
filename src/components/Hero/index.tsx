@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 
 import Button from '../Button';
 
@@ -13,6 +12,7 @@ import {
   HeroSlider,
   HeroImage,
   HeroContent,
+  LinkRouter,
   Arrow,
   SliderButtons,
   PrevArrow,
@@ -62,13 +62,12 @@ const Hero: React.FC = () => {
                     <HeroImage src={slide.image} alt={slide.alt} />
                     <HeroContent>
                       <h1>{slide.title}</h1>
-                      {/* <p>{slide.price}</p> */}
-                      <Button isPrimary>
-                        <Link to={slide.path}>
+                      <LinkRouter className="linkrouter" to={slide.path}>
+                        <Button isPrimary>
                           {slide.label}
                           <Arrow />
-                        </Link>
-                      </Button>
+                        </Button>
+                      </LinkRouter>
                     </HeroContent>
                   </HeroSlider>
                 )}
