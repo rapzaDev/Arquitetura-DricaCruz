@@ -56,7 +56,7 @@ export const NavMenuLinks = styled(LinkS)`
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 0 0.7rem;
+  padding: 0 5rem;
   height: 100%;
   text-decoration: none;
   cursor: pointer;

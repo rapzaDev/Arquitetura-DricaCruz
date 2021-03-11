@@ -31,20 +31,11 @@ const Dropdown: React.FC<IDropdownProps> = ({ isOpen, toggle }) => {
           <DropdownLink to="servicos" onClick={toggle}>
             Nossos Serviços
           </DropdownLink>
-          <DropdownLink to="arquitetura" onClick={toggle}>
-            Arquitetura
-          </DropdownLink>
-          <DropdownLink to="interiores" onClick={toggle}>
-            Interiores
-          </DropdownLink>
-          <DropdownLink to="consultoria" onClick={toggle}>
-            Consultoria
-          </DropdownLink>
-          <DropdownLink to="regularizacao" onClick={toggle}>
-            Regularização
-          </DropdownLink>
           <DropdownLink to="virtual" onClick={toggle}>
             Realidade Virtual
+          </DropdownLink>
+          <DropdownLink to="drieli" onClick={toggle}>
+            Drieli Cruz
           </DropdownLink>
         </DropdownMenu>
 

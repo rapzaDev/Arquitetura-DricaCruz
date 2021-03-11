@@ -1,6 +1,7 @@
 import imgDC from '../../../images/imgDrica.jpg';
 
 interface ISectionData {
+  id: string;
   name: string;
   description: string;
   text: string;
@@ -11,6 +12,7 @@ interface ISectionData {
 }
 
 const SectionData: ISectionData = {
+  id: 'drieli',
   name: 'Drieli Cruz',
   description: 'Arquiteta e Urbanista',
   text:

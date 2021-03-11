@@ -12,34 +12,48 @@ import {
   Logo,
 } from './styles';
 
-// import logoDC from '../../images/logo.jpg';
 import logoDC from '../../images/logoDrica.jpg';
 
-import Data from './data';
+interface ISectionData {
+  id: string;
+  name: string;
+  description: string;
+  text: string;
+  btnlabel: string;
+  image: string;
+  reverse: boolean;
+  delay: number;
+}
 
-const Drieli: React.FC = () => {
-  const sectionData = Data;
-
+const Drieli: React.FC<ISectionData> = ({
+  id,
+  reverse,
+  description,
+  name,
+  text,
+  btnlabel,
+  image,
+}) => {
   return (
-    <Section>
+    <Section id={id}>
       <Container>
         <ContainerBrown>
           <ContainerLeft>
-            <ColumnLeft reverse={sectionData.reverse}>
+            <ColumnLeft reverse={reverse}>
               <h1>
-                {sectionData.description} - {sectionData.name}
+                {description} - {name}
               </h1>
-              <p>{sectionData.text}</p>
+              <p>{text}</p>
               <InfoLink to="/curriculo">
-                <Button isBig>{sectionData.btnlabel}</Button>
+                <Button isBig>{btnlabel}</Button>
               </InfoLink>
             </ColumnLeft>
 
             <Logo src={logoDC} />
           </ContainerLeft>
         </ContainerBrown>
-        <ColumnRigth className="direita" reverse={sectionData.reverse}>
-          <img src={sectionData.image} alt="Drieli" />
+        <ColumnRigth className="direita" reverse={reverse}>
+          <img src={image} alt="Drieli" />
         </ColumnRigth>
       </Container>
     </Section>

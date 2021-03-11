@@ -22,10 +22,6 @@ const Navbar: React.FC<INavProps> = ({ toggle }) => {
       <NavMenu>
         <NavMenuLinks to="quemsomos">Quem Somos</NavMenuLinks>
         <NavMenuLinks to="servicos">Nossos Serviços</NavMenuLinks>
-        <NavMenuLinks to="arquitetura">Arquitetura</NavMenuLinks>
-        <NavMenuLinks to="interiores">Interiores</NavMenuLinks>
-        <NavMenuLinks to="consultoria">Consultoria</NavMenuLinks>
-        <NavMenuLinks to="regularizacao">Regularização</NavMenuLinks>
         <NavMenuLinks to="virtual">Realidade Virtual</NavMenuLinks>
         <NavMenuLinks to="drieli">Drieli Cruz</NavMenuLinks>
       </NavMenu>

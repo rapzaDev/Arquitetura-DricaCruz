@@ -1,6 +1,6 @@
 import dricaSvg from '../../../images/svg-1.svg';
 
-interface IQuemSomos {
+interface IServicos {
   id: string;
   lightBg: boolean;
   lightText: boolean;
@@ -18,12 +18,12 @@ interface IQuemSomos {
   darkText: boolean;
 }
 
-const QuemSomos: IQuemSomos = {
-  id: 'quemsomos',
-  lightBg: false,
-  lightText: true,
+const Servicos: IServicos = {
+  id: 'servicos',
+  lightBg: true,
+  lightText: false,
   lightTextDesc: true,
-  topLine: 'Quem Somos',
+  topLine: 'Nossos Serviços',
   headLine: 'Drieli Cruz Arquitetura',
   paragraph1:
     'Inspirado nas emoções que surgem ao admirar uma bela arquitetura, nasceu a Drieli Cruz Arquitetura com a proposta de reverberar o que as construções nos transmitem de melhor',
@@ -31,12 +31,12 @@ const QuemSomos: IQuemSomos = {
     'Com criatividade e amor pela profissão, nos lançamos no mercado desenvolvendo um trabalho singular e inovador, respeitando a personalidade e necessidades dos nossos clientes.',
   paragraph3:
     'Contrando nosso serviços, você estará ajudando a repercutir esse movimento de boas sensações através da construção e deixando o seu sonho sob os nossos cuidados, do princípio ao fim.',
-  imgStart: false,
+  imgStart: true,
   img: dricaSvg,
   alt: 'Car',
   dark: true,
   primary: true,
-  darkText: false,
+  darkText: true,
 };
 
-export default QuemSomos;
+export default Servicos;
