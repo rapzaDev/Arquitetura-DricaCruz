@@ -62,7 +62,7 @@ export const NavMenuLinks = styled(LinkS)`
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 0 5rem;
+  padding: 0 3.5rem;
   height: 100%;
   text-decoration: none;
   cursor: pointer;
@@ -76,6 +76,7 @@ export const NavBtn = styled.div`
   display: flex;
   align-items: center;
   margin-right: 24px;
+  margin-left: 15px;
 
   @media screen and (max-width: 768px) {
     display: none;
