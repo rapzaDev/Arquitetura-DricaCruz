@@ -7,7 +7,11 @@ import {
 import { shade } from 'polished';
 import { Link as LinkR } from 'react-router-dom';
 
-export const Container = styled.div``;
+interface IHeroProps {
+  id: string;
+}
+
+export const Container = styled.div<IHeroProps>``;
 
 export const HeroSection = styled.section`
   height: 100vh;

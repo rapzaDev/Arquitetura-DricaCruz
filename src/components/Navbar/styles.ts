@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 import Bars from '../../images/bars.svg';
@@ -15,7 +14,7 @@ export const Nav = styled.nav`
   width: 100%;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled(LinkS)`
   color: #fff;
   text-decoration: none;
   border: solid 0.1rem;
@@ -23,6 +22,7 @@ export const NavLogo = styled(LinkR)`
   border-radius: 50%;
   font-size: 24px;
   font-family: 'Playfair 400';
+  cursor: pointer;
 `;
 
 export const MenuBars = styled.i`

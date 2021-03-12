@@ -19,7 +19,11 @@ import {
   NextArrow,
 } from './styles';
 
-const Hero: React.FC = () => {
+interface IHero {
+  id: string;
+}
+
+const Hero: React.FC<IHero> = ({ id }) => {
   const data = HeroData;
 
   const [current, setCurrent] = useState(0);
@@ -51,7 +55,7 @@ const Hero: React.FC = () => {
   }, [current, length]);
 
   return (
-    <Container>
+    <Container id={id}>
       <HeroSection>
         <HeroWrapper>
           {data.map((slide, index) => {

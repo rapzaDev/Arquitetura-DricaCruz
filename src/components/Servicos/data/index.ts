@@ -28,7 +28,7 @@ const Servicos: IServicos = {
     'Então se sonha em construir, fazer reforma, regularizar ou deixar o seu cantinho com sua cara, clique no botão abaixo para saber mais sobre nossos serviços.',
   imgStart: true,
   img: servicosSvg,
-  alt: 'Car',
+  alt: 'serviços',
   dark: true,
   primary: true,
   darkText: true,

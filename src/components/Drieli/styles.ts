@@ -34,7 +34,7 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   background: #5a3931;
-
+  border-top: solid 3rem #f9eae5;
   display: flex;
   justify-content: center;
 `;
@@ -81,6 +81,7 @@ export const ColumnRigth = styled.div<IDataProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+
   order: 2;
   ${props =>
     props.reverse &&

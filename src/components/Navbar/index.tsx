@@ -17,7 +17,7 @@ interface INavProps {
 const Navbar: React.FC<INavProps> = ({ toggle }) => {
   return (
     <Nav>
-      <NavLogo to="/">DC</NavLogo>
+      <NavLogo to="hero">DC</NavLogo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         <NavMenuLinks to="quemsomos">Quem Somos</NavMenuLinks>
