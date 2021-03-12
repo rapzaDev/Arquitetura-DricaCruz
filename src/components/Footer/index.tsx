@@ -51,7 +51,7 @@ const Footer: React.FC<IContato> = ({ id, instagram, whatsapp }) => {
               <SocialIconLink href={whatsapp} target="_blank">
                 <FaWhatsapp />
               </SocialIconLink>
-              <p>(79)99805-3887</p>
+              <p>(79)99646-3173</p>
             </SocialIcons>
           </SocialMediaWrap>
         </SocialMedia>

@@ -1,4 +1,4 @@
-import imgDC from '../../../images/imgDrica.jpg';
+import imgDC from '../../../images/imgDrica2.jpg';
 
 interface ISectionData {
   id: string;
