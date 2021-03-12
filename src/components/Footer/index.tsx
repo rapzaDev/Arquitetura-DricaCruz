@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 
 import {
   FooterContainer,
@@ -24,6 +25,10 @@ interface IContato {
 }
 
 const Footer: React.FC<IContato> = ({ id, instagram, whatsapp }) => {
+  const toggleHome = useCallback(() => {
+    scroll.scrollToTop();
+  }, []);
+
   return (
     <FooterContainer id={id}>
       <FooterWrap>
@@ -38,7 +43,9 @@ const Footer: React.FC<IContato> = ({ id, instagram, whatsapp }) => {
         </FooterLinksContainer> */}
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="hero">DC</SocialLogo>
+            <SocialLogo to="hero" onClick={toggleHome}>
+              DC
+            </SocialLogo>
             <WebsiteRights>
               Drieli Cruz Arquitetura © {new Date().getFullYear()} Todos os
               direitos reservados.{' '}

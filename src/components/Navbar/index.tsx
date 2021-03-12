@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import Button from '../Button';
+
 import {
   Nav,
   NavLogo,
@@ -27,6 +28,26 @@ const Navbar: React.FC<INavProps> = ({ toggle }) => {
     scroll.scrollToTop();
   }, []);
 
+  const toggleContato = useCallback(() => {
+    scroll.scrollToBottom();
+  }, []);
+
+  const toggleQuemSomos = useCallback(() => {
+    scroll.scrollTo(700);
+  }, []);
+
+  const toggleServicos = useCallback(() => {
+    scroll.scrollTo(1550);
+  }, []);
+
+  const toggleVirtual = useCallback(() => {
+    scroll.scrollTo(2450);
+  }, []);
+
+  const toggleDrieli = useCallback(() => {
+    scroll.scrollTo(3390);
+  }, []);
+
   useEffect(() => {
     window.addEventListener('scroll', changeNav);
   }, [changeNav]);
@@ -38,14 +59,22 @@ const Navbar: React.FC<INavProps> = ({ toggle }) => {
       </NavLogo>
       <MenuBars onClick={toggle} />
       <NavMenu>
-        <NavMenuLinks to="quemsomos">Quem Somos</NavMenuLinks>
-        <NavMenuLinks to="servicos">Nossos Serviços</NavMenuLinks>
-        <NavMenuLinks to="virtual">Realidade Virtual</NavMenuLinks>
-        <NavMenuLinks to="drieli">Drieli Cruz</NavMenuLinks>
+        <NavMenuLinks to="quemsomos" onClick={toggleQuemSomos}>
+          Quem Somos
+        </NavMenuLinks>
+        <NavMenuLinks to="servicos" onClick={toggleServicos}>
+          Nossos Serviços
+        </NavMenuLinks>
+        <NavMenuLinks to="virtual" onClick={toggleVirtual}>
+          Realidade Virtual
+        </NavMenuLinks>
+        <NavMenuLinks to="drieli" onClick={toggleDrieli}>
+          Drieli Cruz
+        </NavMenuLinks>
       </NavMenu>
 
       <NavBtn>
-        <BtnLink to="contato">
+        <BtnLink to="contato" onClick={toggleContato}>
           <Button isPrimary>Contato</Button>
         </BtnLink>
       </NavBtn>
