@@ -21,6 +21,7 @@ interface ISubtitleProps {
 export const InfoContainer = styled.div<IContainerInfoProps>`
   color: #fff;
   background: ${props => (props.lightBg ? '#f9eae5' : '#5a3931')};
+  margin-bottom: 75px;
 
   @media screen and (max-width: 768px) {
     padding: 170px 0;

@@ -3,7 +3,11 @@ import { Link as LinkS } from 'react-scroll';
 
 import Bars from '../../images/bars.svg';
 
-export const Nav = styled.nav`
+interface INavProps {
+  scrollNav: boolean;
+}
+
+export const Nav = styled.nav<INavProps>`
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -12,6 +16,8 @@ export const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
+
+  background: ${props => (props.scrollNav ? '#5a3931' : 'transparent')};
 `;
 
 export const NavLogo = styled(LinkS)`

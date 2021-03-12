@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 import { FaTimes } from 'react-icons/fa';
 
@@ -94,14 +93,14 @@ export const BtnWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f9eae5;
-    border: 0;
+    background: #5a3931;
+    border: solid 0.1rem #f9eae5;
   }
 
   a {
-    color: #5a3931;
+    color: #f9eae5;
     text-decoration: none;
   }
 `;
 
-export const BtnLink = styled(LinkR)``;
+export const BtnLink = styled(LinkS)``;

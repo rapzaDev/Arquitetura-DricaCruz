@@ -34,9 +34,10 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   background: #5a3931;
-  border-top: solid 3rem #f9eae5;
+  border-top: solid 1rem #f9eae5;
   display: flex;
   justify-content: center;
+  margin-top: -100px;
 `;
 
 export const ColumnLeft = styled.div<IDataProps>`

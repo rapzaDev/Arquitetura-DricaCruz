@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 import Button from '../Button';
 import {
   Nav,
@@ -15,9 +16,26 @@ interface INavProps {
 }
 
 const Navbar: React.FC<INavProps> = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = useCallback(() => {
+    if (window.scrollY >= 600) setScrollNav(true);
+    else setScrollNav(false);
+  }, []);
+
+  const toggleHome = useCallback(() => {
+    scroll.scrollToTop();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+  }, [changeNav]);
+
   return (
-    <Nav>
-      <NavLogo to="hero">DC</NavLogo>
+    <Nav scrollNav={scrollNav}>
+      <NavLogo to="hero" onClick={toggleHome}>
+        DC
+      </NavLogo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         <NavMenuLinks to="quemsomos">Quem Somos</NavMenuLinks>

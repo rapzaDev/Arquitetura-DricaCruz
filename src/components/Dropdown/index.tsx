@@ -40,9 +40,11 @@ const Dropdown: React.FC<IDropdownProps> = ({ isOpen, toggle }) => {
         </DropdownMenu>
 
         <BtnWrap>
-          <Button isPrimary isBig>
-            <BtnLink to="/contato">Entre em contato</BtnLink>
-          </Button>
+          <BtnLink to="contato" onClick={toggle}>
+            <Button isPrimary isBig>
+              Entre em contato
+            </Button>
+          </BtnLink>
         </BtnWrap>
       </DropdownWrapper>
     </DropdownContainer>
