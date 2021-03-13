@@ -23,10 +23,21 @@ interface IHero {
   id: string;
 }
 
-const Hero: React.FC<IHero> = ({ id }) => {
-  const data = HeroData;
+interface IHeroData {
+  title: string;
+  path: string;
+  label: string;
+  image: string;
+  alt: string;
+}
 
+const Hero: React.FC<IHero> = ({ id }) => {
+  const [data, setData] = useState<IHeroData[]>([]);
   const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    setData(HeroData);
+  }, []);
 
   const { length } = data;
 
@@ -37,7 +48,7 @@ const Hero: React.FC<IHero> = ({ id }) => {
       );
     };
 
-    const timeoutNext = setTimeout(nextSlide, 4200);
+    const timeoutNext = setTimeout(nextSlide, 3000);
 
     return () => {
       if (timeoutNext) {
