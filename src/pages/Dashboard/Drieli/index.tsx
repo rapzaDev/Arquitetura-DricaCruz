@@ -44,7 +44,10 @@ const Drieli: React.FC<ISectionData> = ({
                 {description} - {name}
               </h1>
               <p>{text}</p>
-              <InfoLink to="/curriculo">
+              <InfoLink
+                href="https://www.canva.com/design/DAEUebFzNp0/LQNUKna690X0MK9AcpGuiQ/view"
+                target="_blank"
+              >
                 <Button isBig>{btnlabel}</Button>
               </InfoLink>
             </ColumnLeft>

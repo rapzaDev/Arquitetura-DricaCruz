@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components';
-import { Link as LinkR } from 'react-router-dom';
 
 interface IDataProps {
   reverse: boolean;
@@ -75,7 +74,7 @@ export const ColumnLeft = styled.div<IDataProps>`
   }
 `;
 
-export const InfoLink = styled(LinkR)``;
+export const InfoLink = styled.a``;
 
 export const ColumnRigth = styled.div<IDataProps>`
   padding: 1rem 2rem;
