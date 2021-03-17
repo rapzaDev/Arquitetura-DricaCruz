@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-const appearFromLeft = keyframes`
+const appearFromZ = keyframes`
   from {
     opacity: 0;
     transform: translateZ(50px);
@@ -33,6 +33,7 @@ export const ServicesH1 = styled.h1`
   color: #f9eae5;
   margin-bottom: 64px;
   font-family: 'Playfair 700';
+  animation: ${appearFromZ} 2s;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
@@ -48,7 +49,7 @@ export const ServicesWrapper = styled.div`
   align-items: center;
   grid-gap: 16px;
   padding: 0 10px;
-  animation: ${appearFromLeft} 3s;
+  animation: ${appearFromZ} 4s;
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
