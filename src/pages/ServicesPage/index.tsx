@@ -14,15 +14,15 @@ import footerData from './Footer/data';
 
 const Services: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openedService, setOpenedService] = useState(false);
+  const [openArquiteturaInfo, setOpenArquiteturaInfo] = useState(false);
 
   const toggle = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
 
-  const toggleService = useCallback(() => {
-    setOpenedService(!openedService);
-  }, [openedService]);
+  const toggleArquiteturaInfo = useCallback(() => {
+    setOpenArquiteturaInfo(!openArquiteturaInfo);
+  }, [openArquiteturaInfo]);
 
   return (
     <>
@@ -30,12 +30,15 @@ const Services: React.FC = () => {
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <ArquiteturaInfo
-        toggleService={toggleService}
-        openedService={openedService}
+        toggleArquiteturaInfo={toggleArquiteturaInfo}
+        openArquiteturaInfo={openArquiteturaInfo}
         {...arquiteturaInfoData}
       />
-      <Servicos toggleService={toggleService} {...servicesData} />
-      <Footer openedService={openedService} {...footerData} />
+      <Servicos
+        toggleArquiteturaInfo={toggleArquiteturaInfo}
+        {...servicesData}
+      />
+      <Footer openArquiteturaInfo={openArquiteturaInfo} {...footerData} />
     </>
   );
 };

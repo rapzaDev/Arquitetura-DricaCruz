@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Link as LinkS } from 'react-scroll';
 
 interface ISocialLogoProps {
-  openedService: boolean;
+  openArquiteturaInfo: boolean;
 }
 
 export const FooterContainer = styled.footer`
@@ -97,13 +97,6 @@ export const SocialLogo = styled(LinkS)<ISocialLogoProps>`
   font-family: 'Playfair 400';
   margin-bottom: 16px;
   cursor: pointer;
-
-  /* ${props =>
-    props.openedService &&
-    css`
-      opacity: 0;
-      cursor: none;
-    `}; */
 `;
 
 export const WebsiteRights = styled.small`

@@ -15,8 +15,8 @@ import {
 } from './styles';
 
 interface IArquiteturaInfoProps {
-  openedService: boolean;
-  toggleService(): void;
+  openArquiteturaInfo: boolean;
+  toggleArquiteturaInfo(): void;
   description: string;
   etapas: string;
   tipo1: string;
@@ -27,8 +27,8 @@ interface IArquiteturaInfoProps {
 }
 
 const ArquiteturaInfo: React.FC<IArquiteturaInfoProps> = ({
-  openedService,
-  toggleService,
+  openArquiteturaInfo,
+  toggleArquiteturaInfo,
   description,
   etapas,
   tipo1,
@@ -39,10 +39,10 @@ const ArquiteturaInfo: React.FC<IArquiteturaInfoProps> = ({
 }) => {
   return (
     <ArquiteturaInfoContainer
-      openedService={openedService}
-      toggleService={toggleService}
+      openArquiteturaInfo={openArquiteturaInfo}
+      toggleArquiteturaInfo={toggleArquiteturaInfo}
     >
-      <Icon onClick={toggleService}>
+      <Icon onClick={toggleArquiteturaInfo}>
         <CloseIcon />
       </Icon>
       <ArquiteturaInfoWrapper>
@@ -66,9 +66,13 @@ const ArquiteturaInfo: React.FC<IArquiteturaInfoProps> = ({
         </ArquiteturaInfoMenu>
 
         <BtnWrap>
-          <BtnLink href="contato" onClick={toggleService}>
+          <BtnLink
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfB1EivrF9xT8JfdB935NC-a8vTqxt056-2nSnHCXGTxghmuQ/viewform"
+            target="_blank"
+            onClick={toggleArquiteturaInfo}
+          >
             <Button isPrimary isBig>
-              Entre em contato
+              Solicitar Orçamento
             </Button>
           </BtnLink>
         </BtnWrap>

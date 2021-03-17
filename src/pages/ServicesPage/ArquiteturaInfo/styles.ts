@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
 
 interface IArquiteturaInfoProps {
-  openedService: boolean;
-  toggleService(): void;
+  openArquiteturaInfo: boolean;
+  toggleArquiteturaInfo(): void;
 }
 
 export const ArquiteturaInfoContainer = styled.div<IArquiteturaInfoProps>`
@@ -36,13 +36,13 @@ export const ArquiteturaInfoContainer = styled.div<IArquiteturaInfoProps>`
   }
 
   ${props =>
-    props.openedService &&
+    props.openArquiteturaInfo &&
     css`
       opacity: 1;
     `};
 
   ${props =>
-    props.openedService &&
+    props.openArquiteturaInfo &&
     css`
       top: 0;
     `};
@@ -62,6 +62,11 @@ export const Icon = styled.div`
 export const CloseIcon = styled(FaTimes)`
   color: #f9eae5;
   cursor: pointer;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 2rem;
+    color: #5a3931;
+  }
 `;
 
 export const ArquiteturaInfoWrapper = styled.div`
@@ -113,6 +118,7 @@ export const ArquiteturaInfoItems = styled.div`
 
   h4 {
     margin-bottom: 15px;
+    font-family: 'Playfair 400';
   }
 
   p {
@@ -120,6 +126,7 @@ export const ArquiteturaInfoItems = styled.div`
     max-width: 900px;
     margin-bottom: 40px;
     font-size: 18px;
+    font-family: 'Playfair 400';
   }
 `;
 
@@ -129,6 +136,7 @@ export const Tipo = styled.li`
   font-size: 18px;
   margin-top: 1.2rem;
   margin-left: 1rem;
+  font-family: 'Playfair 400';
 `;
 
 export const BtnWrap = styled.div`
@@ -142,8 +150,22 @@ export const BtnWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4rem 2rem 4rem;
+    margin-left: 10px;
+
     background: #5a3931;
     border: solid 0.1rem #f9eae5;
+    font-family: 'Playfair 400';
+
+    @media screen and (max-width: 480px) {
+      padding: 4rem 4rem 4rem;
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 4rem 4rem 4rem;
+      margin-left: 0;
+    }
   }
 
   a {

@@ -22,14 +22,14 @@ interface IFooter {
   id: string;
   instagram: string;
   whatsapp: string;
-  openedService: boolean;
+  openArquiteturaInfo: boolean;
 }
 
 const Footer: React.FC<IFooter> = ({
   id,
   instagram,
   whatsapp,
-  openedService,
+  openArquiteturaInfo,
 }) => {
   const toggleHome = useCallback(() => {
     scroll.scrollToTop();
@@ -40,11 +40,11 @@ const Footer: React.FC<IFooter> = ({
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            {!openedService ? (
+            {!openArquiteturaInfo ? (
               <SocialLogo
                 to="hero"
                 onClick={toggleHome}
-                openedService={openedService}
+                openArquiteturaInfo={openArquiteturaInfo}
               >
                 DC
               </SocialLogo>
