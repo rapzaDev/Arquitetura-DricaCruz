@@ -5,12 +5,12 @@ import ScrollToTop from '../../components/ScrollToTop';
 import Dropdown from './Dropdown';
 import Navbar from './Navbar';
 import ArquiteturaInfo from './ArquiteturaInfo';
-// import InterioresInfo from './InterioresInfo';
+import InterioresInfo from './InterioresInfo';
 import Servicos from './Servicos';
 import Footer from './Footer';
 
 import arquiteturaInfoData from './ArquiteturaInfo/data';
-// import interioresInfoData from './InterioresInfo/data';
+import interioresInfoData from './InterioresInfo/data';
 import servicesData from './Servicos/data';
 import footerData from './Footer/data';
 
@@ -44,15 +44,27 @@ const Services: React.FC = () => {
         </>
       ) : (
         <>
-          <Navbar toggle={toggle} />
-          <Dropdown isOpen={isOpen} toggle={toggle} />
+          {openInterioresInfo ? (
+            <>
+              <ScrollToTop />
+              <InterioresInfo
+                toggleInterioresInfo={toggleInterioresInfo}
+                {...interioresInfoData}
+              />
+            </>
+          ) : (
+            <>
+              <Navbar toggle={toggle} />
+              <Dropdown isOpen={isOpen} toggle={toggle} />
 
-          <Servicos
-            toggleInterioresInfo={toggleInterioresInfo}
-            toggleArquiteturaInfo={toggleArquiteturaInfo}
-            {...servicesData}
-          />
-          <Footer openArquiteturaInfo={openArquiteturaInfo} {...footerData} />
+              <Servicos
+                toggleInterioresInfo={toggleInterioresInfo}
+                toggleArquiteturaInfo={toggleArquiteturaInfo}
+                {...servicesData}
+              />
+              <Footer {...footerData} />
+            </>
+          )}
         </>
       )}
     </>

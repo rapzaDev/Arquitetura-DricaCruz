@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { FaTimes } from 'react-icons/fa';
 
@@ -7,8 +7,19 @@ interface IArquiteturaInfoProps {
   toggleArquiteturaInfo(): void;
 }
 
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
 export const ArquiteturaInfoContainer = styled.div<IArquiteturaInfoProps>`
-  height: 800px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,15 +27,11 @@ export const ArquiteturaInfoContainer = styled.div<IArquiteturaInfoProps>`
   background: #5a3931;
 
   @media screen and (max-width: 768px) {
-    position: absolute;
-    justify-content: center;
-    height: 1400px;
+    height: 100%;
   }
 
   @media screen and (max-width: 480px) {
-    position: absolute;
-    padding: 0.3rem;
-    height: 1300px;
+    height: 100%;
   }
 `;
 
@@ -43,6 +50,11 @@ export const Icon = styled.div`
     right: -43rem;
   }
 
+  @media screen and (width: 1024px) {
+    top: -1rem;
+    right: -58rem;
+  }
+
   @media screen and (max-width: 480px) {
     top: -5rem;
     right: -18rem;
@@ -51,6 +63,11 @@ export const Icon = styled.div`
   @media screen and (width: 414px) {
     top: -5rem;
     right: -21rem;
+  }
+
+  @media screen and (width: 360px) {
+    top: -7rem;
+    right: -18rem;
   }
 `;
 
@@ -67,6 +84,7 @@ export const CloseIcon = styled(FaTimes)`
 export const ArquiteturaInfoWrapper = styled.div`
   background: #f9eae5;
   display: flex;
+  animation: ${appearFromLeft} 1s;
 
   @media screen and (max-width: 480px) {
     padding: 8rem 0;
@@ -140,6 +158,7 @@ export const BtnWrap = styled.div`
   align-items: center;
   margin: 0 auto;
   max-width: 300px;
+  animation: ${appearFromLeft} 1.5s;
 
   button {
     position: sticky;

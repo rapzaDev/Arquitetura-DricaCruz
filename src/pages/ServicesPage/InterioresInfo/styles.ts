@@ -1,66 +1,77 @@
-import styled, { css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { FaTimes } from 'react-icons/fa';
 
 interface IInterioresInfoProps {
-  openInterioresInfo: boolean;
   toggleInterioresInfo(): void;
 }
 
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
 export const InterioresInfoContainer = styled.div<IInterioresInfoProps>`
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background: #5a3931;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  top: -100%;
-
-  padding-top: 5rem;
-
-  transition: 0.3s ease-in-out;
-  opacity: 0;
+  background: #5a3931;
 
   @media screen and (max-width: 768px) {
-    position: absolute;
-    justify-content: center;
-    height: 1400px;
+    height: 100%;
   }
 
   @media screen and (max-width: 480px) {
-    position: absolute;
-    padding: 0.3rem;
-    height: 1300px;
+    height: 100%;
   }
-
-  ${props =>
-    props.openInterioresInfo &&
-    css`
-      opacity: 1;
-    `};
-
-  ${props =>
-    props.openInterioresInfo &&
-    css`
-      top: 0;
-    `};
 `;
 
 export const Icon = styled.div`
-  position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
+  position: relative;
+  top: 0.1rem;
+  right: -73rem;
   background: transparent;
   font-size: 2rem;
   outline: none;
 
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    top: -5rem;
+    right: -43rem;
+  }
+
+  @media screen and (width: 1024px) {
+    top: -1rem;
+    right: -58rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    top: -5rem;
+    right: -18rem;
+  }
+
+  @media screen and (width: 414px) {
+    top: -5rem;
+    right: -21rem;
+  }
+
+  @media screen and (width: 360px) {
+    top: -7rem;
+    right: -18rem;
+  }
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #f9eae5;
+  color: #5a3931;
   cursor: pointer;
 
   @media screen and (max-width: 480px) {
@@ -72,6 +83,7 @@ export const CloseIcon = styled(FaTimes)`
 export const InterioresInfoWrapper = styled.div`
   background: #f9eae5;
   display: flex;
+  animation: ${appearFromLeft} 1s;
 
   @media screen and (max-width: 480px) {
     padding: 8rem 0;
@@ -145,8 +157,10 @@ export const BtnWrap = styled.div`
   align-items: center;
   margin: 0 auto;
   max-width: 300px;
+  animation: ${appearFromLeft} 1.5s;
 
   button {
+    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;

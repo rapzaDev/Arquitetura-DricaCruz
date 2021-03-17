@@ -15,7 +15,6 @@ import {
 } from './styles';
 
 interface IInterioresInfoProps {
-  openInterioresInfo: boolean;
   toggleInterioresInfo(): void;
   description: string;
   tipo1: string;
@@ -28,7 +27,6 @@ interface IInterioresInfoProps {
 }
 
 const InterioresInfo: React.FC<IInterioresInfoProps> = ({
-  openInterioresInfo,
   toggleInterioresInfo,
   description,
   tipo1,
@@ -40,16 +38,13 @@ const InterioresInfo: React.FC<IInterioresInfoProps> = ({
   tipo7,
 }) => {
   return (
-    <InterioresInfoContainer
-      openInterioresInfo={openInterioresInfo}
-      toggleInterioresInfo={toggleInterioresInfo}
-    >
-      <Icon onClick={toggleInterioresInfo}>
-        <CloseIcon />
-      </Icon>
+    <InterioresInfoContainer toggleInterioresInfo={toggleInterioresInfo}>
       <InterioresInfoWrapper>
         <InterioresInfoMenu>
           <InterioresInfoItems>
+            <Icon onClick={toggleInterioresInfo}>
+              <CloseIcon />
+            </Icon>
             <h4>Descrição:</h4>
             <p>{description}</p>
 

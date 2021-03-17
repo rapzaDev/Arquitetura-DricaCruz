@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import { Link as LinkS } from 'react-scroll';
 
-interface ISocialLogoProps {
-  openArquiteturaInfo: boolean;
-}
-
 export const FooterContainer = styled.footer`
   background-color: #f9eae5;
 `;
@@ -87,7 +83,7 @@ export const SocialMediaWrap = styled.div`
   }
 `;
 
-export const SocialLogo = styled(LinkS)<ISocialLogoProps>`
+export const SocialLogo = styled(LinkS)`
   color: #5a3931;
   text-decoration: none;
   border: solid 0.1rem;

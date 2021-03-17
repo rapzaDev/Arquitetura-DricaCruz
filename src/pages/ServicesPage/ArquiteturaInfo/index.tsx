@@ -15,7 +15,6 @@ import {
 } from './styles';
 
 interface IArquiteturaInfoProps {
-  // openArquiteturaInfo: boolean;
   toggleArquiteturaInfo(): void;
   description: string;
   etapas: string;
@@ -27,7 +26,6 @@ interface IArquiteturaInfoProps {
 }
 
 const ArquiteturaInfo: React.FC<IArquiteturaInfoProps> = ({
-  // openArquiteturaInfo,
   toggleArquiteturaInfo,
   description,
   etapas,
