@@ -16,26 +16,34 @@ interface IServicos {
   Icon2: string;
   Icon3: string;
   Icon4: string;
+  toggleService(): void;
 }
 
-const Servicos: React.FC<IServicos> = ({ id, Icon1, Icon2, Icon3, Icon4 }) => {
+const Servicos: React.FC<IServicos> = ({
+  id,
+  Icon1,
+  Icon2,
+  Icon3,
+  Icon4,
+  toggleService,
+}) => {
   return (
     <ServicesContainer id={id}>
       <ServicesH1>Nossos Serviços</ServicesH1>
       <ServicesWrapper>
-        <ServicesCard>
+        <ServicesCard onClick={toggleService}>
           <ServicesIcon src={Icon1} />
           <ServicesH2>Arquitetura</ServicesH2>
         </ServicesCard>
-        <ServicesCard>
+        <ServicesCard onClick={toggleService}>
           <ServicesIcon src={Icon2} />
           <ServicesH2>Interiores</ServicesH2>
         </ServicesCard>
-        <ServicesCard>
+        <ServicesCard onClick={toggleService}>
           <ServicesIcon src={Icon3} />
           <ServicesH2>Consultoria</ServicesH2>
         </ServicesCard>
-        <ServicesCard>
+        <ServicesCard onClick={toggleService}>
           <ServicesIcon src={Icon4} />
           <ServicesH2>Regularização</ServicesH2>
         </ServicesCard>

@@ -18,13 +18,19 @@ import {
   SocialIconLink,
 } from './styles';
 
-interface IContato {
+interface IFooter {
   id: string;
   instagram: string;
   whatsapp: string;
+  openedService: boolean;
 }
 
-const Footer: React.FC<IContato> = ({ id, instagram, whatsapp }) => {
+const Footer: React.FC<IFooter> = ({
+  id,
+  instagram,
+  whatsapp,
+  openedService,
+}) => {
   const toggleHome = useCallback(() => {
     scroll.scrollToTop();
   }, []);
@@ -32,20 +38,19 @@ const Footer: React.FC<IContato> = ({ id, instagram, whatsapp }) => {
   return (
     <FooterContainer id={id}>
       <FooterWrap>
-        {/* <FooterLinksContainer>
-          <FooterLinksWrapper>
-            <FooterLinkItems>
-              <FooterLinkTitle>Midia Social</FooterLinkTitle>
-
-              <FooterLink href={instagram}>Instagram</FooterLink>
-            </FooterLinkItems>
-          </FooterLinksWrapper>
-        </FooterLinksContainer> */}
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="hero" onClick={toggleHome}>
-              DC
-            </SocialLogo>
+            {!openedService ? (
+              <SocialLogo
+                to="hero"
+                onClick={toggleHome}
+                openedService={openedService}
+              >
+                DC
+              </SocialLogo>
+            ) : (
+              <></>
+            )}
             <WebsiteRights>
               Drieli Cruz Arquitetura © {new Date().getFullYear()} Todos os
               direitos reservados.{' '}

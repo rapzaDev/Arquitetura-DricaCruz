@@ -1,5 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link as LinkS } from 'react-scroll';
+
+interface ISocialLogoProps {
+  openedService: boolean;
+}
 
 export const FooterContainer = styled.footer`
   background-color: #f9eae5;
@@ -83,7 +87,7 @@ export const SocialMediaWrap = styled.div`
   }
 `;
 
-export const SocialLogo = styled(LinkS)`
+export const SocialLogo = styled(LinkS)<ISocialLogoProps>`
   color: #5a3931;
   text-decoration: none;
   border: solid 0.1rem;
@@ -93,6 +97,13 @@ export const SocialLogo = styled(LinkS)`
   font-family: 'Playfair 400';
   margin-bottom: 16px;
   cursor: pointer;
+
+  /* ${props =>
+    props.openedService &&
+    css`
+      opacity: 0;
+      cursor: none;
+    `}; */
 `;
 
 export const WebsiteRights = styled.small`
