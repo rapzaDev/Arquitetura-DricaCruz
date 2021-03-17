@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateZ(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+`;
 
 export const ServicesContainer = styled.div`
   height: 800px;
@@ -31,12 +42,13 @@ export const ServicesH1 = styled.h1`
 
 export const ServicesWrapper = styled.div`
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 9rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
   padding: 0 10px;
+  animation: ${appearFromLeft} 3s;
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
