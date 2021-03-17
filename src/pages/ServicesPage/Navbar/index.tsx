@@ -20,7 +20,7 @@ const Navbar: React.FC<INavProps> = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = useCallback(() => {
-    if (window.scrollY >= 100) setScrollNav(true);
+    if (window.scrollY >= 10) setScrollNav(true);
     else setScrollNav(false);
   }, []);
 

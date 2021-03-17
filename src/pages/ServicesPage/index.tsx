@@ -5,16 +5,19 @@ import ScrollToTop from '../../components/ScrollToTop';
 import Dropdown from './Dropdown';
 import Navbar from './Navbar';
 import ArquiteturaInfo from './ArquiteturaInfo';
+// import InterioresInfo from './InterioresInfo';
 import Servicos from './Servicos';
 import Footer from './Footer';
 
 import arquiteturaInfoData from './ArquiteturaInfo/data';
+// import interioresInfoData from './InterioresInfo/data';
 import servicesData from './Servicos/data';
 import footerData from './Footer/data';
 
 const Services: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openArquiteturaInfo, setOpenArquiteturaInfo] = useState(false);
+  const [openInterioresInfo, setOpenInterioresInfo] = useState(false);
 
   const toggle = useCallback(() => {
     setIsOpen(!isOpen);
@@ -24,21 +27,34 @@ const Services: React.FC = () => {
     setOpenArquiteturaInfo(!openArquiteturaInfo);
   }, [openArquiteturaInfo]);
 
+  const toggleInterioresInfo = useCallback(() => {
+    setOpenInterioresInfo(!openInterioresInfo);
+  }, [openInterioresInfo]);
+
   return (
     <>
       <ScrollToTop />
-      <Navbar toggle={toggle} />
-      <Dropdown isOpen={isOpen} toggle={toggle} />
-      <ArquiteturaInfo
-        toggleArquiteturaInfo={toggleArquiteturaInfo}
-        openArquiteturaInfo={openArquiteturaInfo}
-        {...arquiteturaInfoData}
-      />
-      <Servicos
-        toggleArquiteturaInfo={toggleArquiteturaInfo}
-        {...servicesData}
-      />
-      <Footer openArquiteturaInfo={openArquiteturaInfo} {...footerData} />
+      {openArquiteturaInfo ? (
+        <>
+          <ScrollToTop />
+          <ArquiteturaInfo
+            toggleArquiteturaInfo={toggleArquiteturaInfo}
+            {...arquiteturaInfoData}
+          />
+        </>
+      ) : (
+        <>
+          <Navbar toggle={toggle} />
+          <Dropdown isOpen={isOpen} toggle={toggle} />
+
+          <Servicos
+            toggleInterioresInfo={toggleInterioresInfo}
+            toggleArquiteturaInfo={toggleArquiteturaInfo}
+            {...servicesData}
+          />
+          <Footer openArquiteturaInfo={openArquiteturaInfo} {...footerData} />
+        </>
+      )}
     </>
   );
 };

@@ -10,9 +10,9 @@ interface IArquiteturaInfo {
 
 const ArquiteturaInfoData: IArquiteturaInfo = {
   description:
-    'O projeto arquitetônico é o esboço do projeto, essencial para qualquer edificação. Ele é definido como a materialização de uma ideia ou do espaço imaginado. Resumindo em um conjunto de representações gráficas e documentos elaborados com o objetivo de construir ou reformar uma obra',
+    'O projeto arquitetônico é o esboço do projeto, essencial para qualquer edificação. Ele é definido como a materialização de uma ideia ou do espaço imaginado. Resumindo em um conjunto de representações gráficas e documentos elaborados com o objetivo de construir ou reformar uma obra.',
   etapas:
-    'Levantamento cadastral, Estudo preliminar, Anteprojeto e projeto Executivo',
+    'Levantamento cadastral, Estudo preliminar, Anteprojeto e projeto Executivo.',
   tipo1: 'Residencial',
   tipo2: 'Comercial',
   tipo3: 'Empresarial',

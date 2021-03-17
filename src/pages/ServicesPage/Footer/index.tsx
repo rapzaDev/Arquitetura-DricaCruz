@@ -40,17 +40,14 @@ const Footer: React.FC<IFooter> = ({
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            {!openArquiteturaInfo ? (
-              <SocialLogo
-                to="hero"
-                onClick={toggleHome}
-                openArquiteturaInfo={openArquiteturaInfo}
-              >
-                DC
-              </SocialLogo>
-            ) : (
-              <></>
-            )}
+            <SocialLogo
+              to="hero"
+              onClick={toggleHome}
+              openArquiteturaInfo={openArquiteturaInfo}
+            >
+              DC
+            </SocialLogo>
+
             <WebsiteRights>
               Drieli Cruz Arquitetura © {new Date().getFullYear()} Todos os
               direitos reservados.{' '}

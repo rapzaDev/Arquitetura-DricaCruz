@@ -2,54 +2,56 @@ import React from 'react';
 
 import Button from '../../../components/Button';
 import {
-  ArquiteturaInfoContainer,
+  InterioresInfoContainer,
   Icon,
   CloseIcon,
-  ArquiteturaInfoWrapper,
-  ArquiteturaInfoMenu,
-  ArquiteturaInfoItems,
+  InterioresInfoWrapper,
+  InterioresInfoMenu,
+  InterioresInfoItems,
   TiposList,
   Tipo,
   BtnWrap,
   BtnLink,
 } from './styles';
 
-interface IArquiteturaInfoProps {
-  // openArquiteturaInfo: boolean;
-  toggleArquiteturaInfo(): void;
+interface IInterioresInfoProps {
+  openInterioresInfo: boolean;
+  toggleInterioresInfo(): void;
   description: string;
-  etapas: string;
   tipo1: string;
   tipo2: string;
   tipo3: string;
   tipo4: string;
   tipo5: string;
+  tipo6: string;
+  tipo7: string;
 }
 
-const ArquiteturaInfo: React.FC<IArquiteturaInfoProps> = ({
-  // openArquiteturaInfo,
-  toggleArquiteturaInfo,
+const InterioresInfo: React.FC<IInterioresInfoProps> = ({
+  openInterioresInfo,
+  toggleInterioresInfo,
   description,
-  etapas,
   tipo1,
   tipo2,
   tipo3,
   tipo4,
   tipo5,
+  tipo6,
+  tipo7,
 }) => {
   return (
-    <ArquiteturaInfoContainer toggleArquiteturaInfo={toggleArquiteturaInfo}>
-      <ArquiteturaInfoWrapper>
-        <ArquiteturaInfoMenu>
-          <ArquiteturaInfoItems>
-            <Icon onClick={toggleArquiteturaInfo}>
-              <CloseIcon />
-            </Icon>
+    <InterioresInfoContainer
+      openInterioresInfo={openInterioresInfo}
+      toggleInterioresInfo={toggleInterioresInfo}
+    >
+      <Icon onClick={toggleInterioresInfo}>
+        <CloseIcon />
+      </Icon>
+      <InterioresInfoWrapper>
+        <InterioresInfoMenu>
+          <InterioresInfoItems>
             <h4>Descrição:</h4>
             <p>{description}</p>
-
-            <h4>Etapas:</h4>
-            <p>{etapas}</p>
 
             <TiposList>
               <h4>Tipos:</h4>
@@ -58,24 +60,26 @@ const ArquiteturaInfo: React.FC<IArquiteturaInfoProps> = ({
               <Tipo>{tipo3}</Tipo>
               <Tipo>{tipo4}</Tipo>
               <Tipo>{tipo5}</Tipo>
+              <Tipo>{tipo6}</Tipo>
+              <Tipo>{tipo7}</Tipo>
             </TiposList>
-          </ArquiteturaInfoItems>
-        </ArquiteturaInfoMenu>
+          </InterioresInfoItems>
+        </InterioresInfoMenu>
 
         <BtnWrap>
           <BtnLink
             href="https://docs.google.com/forms/d/e/1FAIpQLSfB1EivrF9xT8JfdB935NC-a8vTqxt056-2nSnHCXGTxghmuQ/viewform"
             target="_blank"
-            onClick={toggleArquiteturaInfo}
+            onClick={toggleInterioresInfo}
           >
             <Button isPrimary isBig>
               Solicitar Orçamento
             </Button>
           </BtnLink>
         </BtnWrap>
-      </ArquiteturaInfoWrapper>
-    </ArquiteturaInfoContainer>
+      </InterioresInfoWrapper>
+    </InterioresInfoContainer>
   );
 };
 
-export default ArquiteturaInfo;
+export default InterioresInfo;

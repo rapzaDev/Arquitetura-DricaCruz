@@ -2,18 +2,26 @@ import styled, { css } from 'styled-components';
 
 import { FaTimes } from 'react-icons/fa';
 
-interface IArquiteturaInfoProps {
-  // openArquiteturaInfo: boolean;
-  toggleArquiteturaInfo(): void;
+interface IInterioresInfoProps {
+  openInterioresInfo: boolean;
+  toggleInterioresInfo(): void;
 }
 
-export const ArquiteturaInfoContainer = styled.div<IArquiteturaInfoProps>`
-  height: 800px;
+export const InterioresInfoContainer = styled.div<IInterioresInfoProps>`
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #5a3931;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: #5a3931;
+  top: -100%;
+
+  padding-top: 5rem;
+
+  transition: 0.3s ease-in-out;
+  opacity: 0;
 
   @media screen and (max-width: 768px) {
     position: absolute;
@@ -26,36 +34,33 @@ export const ArquiteturaInfoContainer = styled.div<IArquiteturaInfoProps>`
     padding: 0.3rem;
     height: 1300px;
   }
+
+  ${props =>
+    props.openInterioresInfo &&
+    css`
+      opacity: 1;
+    `};
+
+  ${props =>
+    props.openInterioresInfo &&
+    css`
+      top: 0;
+    `};
 `;
 
 export const Icon = styled.div`
-  position: relative;
-  top: 0.1rem;
-  right: -73rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
   background: transparent;
   font-size: 2rem;
   outline: none;
 
   cursor: pointer;
-
-  @media screen and (max-width: 768px) {
-    top: -5rem;
-    right: -43rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    top: -5rem;
-    right: -18rem;
-  }
-
-  @media screen and (width: 414px) {
-    top: -5rem;
-    right: -21rem;
-  }
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #5a3931;
+  color: #f9eae5;
   cursor: pointer;
 
   @media screen and (max-width: 480px) {
@@ -64,7 +69,7 @@ export const CloseIcon = styled(FaTimes)`
   }
 `;
 
-export const ArquiteturaInfoWrapper = styled.div`
+export const InterioresInfoWrapper = styled.div`
   background: #f9eae5;
   display: flex;
 
@@ -78,7 +83,7 @@ export const ArquiteturaInfoWrapper = styled.div`
   }
 `;
 
-export const ArquiteturaInfoMenu = styled.div`
+export const InterioresInfoMenu = styled.div`
   display: flex;
 
   @media screen and (max-width: 480px) {
@@ -90,7 +95,7 @@ export const ArquiteturaInfoMenu = styled.div`
   }
 `;
 
-export const ArquiteturaInfoItems = styled.div`
+export const InterioresInfoItems = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
@@ -142,7 +147,6 @@ export const BtnWrap = styled.div`
   max-width: 300px;
 
   button {
-    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
