@@ -7,7 +7,6 @@
         "plugin:react/recommended",
         "airbnb",
         "plugin:@typescript-eslint/recommended",
-        "prettier",
         "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
@@ -25,17 +24,15 @@
         "prettier"
     ],
     "rules": {
+      "react/no-array-index-key": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/prop-types": "off",
+      "no-use-before-define": "off",
       "prettier/prettier": "error",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
       "import/prefer-default-export": "off",
-      "no-use-before-define": "off",
-      "react/jsx-props-no-spreading": "off",
-      "react/prop-types": "off",
-      "react/no-array-index-key": "off",
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": ["error"],
       "import/extensions": [
           "error",
           "ignorePackages",
@@ -43,15 +40,7 @@
             "ts": "never",
             "tsx": "never"
           }
-      ],
-      "@typescript-eslint/naming-convention": [
-        "error",
-        {
-          "selector": "interface",
-          "prefix": ["I"],
-          "format": ["PascalCase"]
-        }
-      ]
+        ]
     },
     "settings": {
       "import/resolver": {
