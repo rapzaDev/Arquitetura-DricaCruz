@@ -6,6 +6,7 @@ import {
   VirtualH1,
   VirtualWrapper,
   VideoPlayer,
+  // VideoTitle,
   // VirtualCard,
   // VirtualIcon,
   // VirtualH2,
@@ -19,6 +20,7 @@ const Videos: React.FC = () => {
       <VirtualGroup>
         <VirtualH1>Realidade Virtual</VirtualH1>
         <VirtualWrapper>
+          {/* <VideoTitle>Praça do Alomorfose</VideoTitle> */}
           <VideoPlayer controls url={video} />
         </VirtualWrapper>
       </VirtualGroup>

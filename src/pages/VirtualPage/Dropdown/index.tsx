@@ -6,8 +6,8 @@ import {
   Icon,
   CloseIcon,
   DropdownWrapper,
-  DropdownMenu,
-  DropdownLink,
+  // DropdownMenu,
+  // DropdownLink,
   BtnWrap,
   BtnLink,
 } from './styles';
@@ -24,7 +24,7 @@ const Dropdown: React.FC<IDropdownProps> = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <DropdownWrapper>
-        <DropdownMenu>
+        {/* <DropdownMenu>
           <DropdownLink to="arquitetura" onClick={toggle}>
             Arquitetura
           </DropdownLink>
@@ -37,7 +37,7 @@ const Dropdown: React.FC<IDropdownProps> = ({ isOpen, toggle }) => {
           <DropdownLink to="regularizacao" onClick={toggle}>
             Regularização
           </DropdownLink>
-        </DropdownMenu>
+        </DropdownMenu> */}
 
         <BtnWrap>
           <BtnLink to="contato" onClick={toggle}>

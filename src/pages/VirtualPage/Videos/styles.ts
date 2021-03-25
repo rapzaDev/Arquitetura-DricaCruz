@@ -26,6 +26,8 @@ export const VirtualGroup = styled.div`
   margin-top: -9rem;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  animation: ${appearFromZ} 2s;
 `;
 
 export const VirtualH1 = styled.h1`
@@ -43,12 +45,13 @@ export const VirtualH1 = styled.h1`
 
 export const VirtualWrapper = styled.div`
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  animation: ${appearFromZ} 2s;
 
-  padding: 0.5rem;
-
+  padding: 1rem;
+  border-radius: 2%;
+  border: 1.5rem double #5a3931;
   background: #f9eae5;
 
   @media screen and (max-width: 480px) {
@@ -66,6 +69,14 @@ export const VirtualWrapper = styled.div`
   @media screen and (width: 414px) {
     width: 410px;
   }
+`;
+
+export const VideoTitle = styled.h3`
+  /* margin-bottom: 24px; */
+  font-family: 'Playfair 700';
+  font-size: 20px;
+
+  color: #5a3931;
 `;
 
 export const VideoPlayer = styled(ReactPlayer)``;

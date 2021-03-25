@@ -17,6 +17,8 @@ export const Nav = styled.nav<INavProps>`
   position: fixed;
   width: 100%;
 
+  transition: background 0.5s;
+
   background: ${props => (props.scrollNav ? '#5a3931' : 'transparent')};
 `;
 
