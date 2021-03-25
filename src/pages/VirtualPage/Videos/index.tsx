@@ -18,7 +18,7 @@ const Videos: React.FC = () => {
   return (
     <VirtualContainer>
       <VirtualGroup>
-        <VirtualH1>Realidade Virtual</VirtualH1>
+        <VirtualH1>Praça do Alomorfose</VirtualH1>
         <VirtualWrapper>
           {/* <VideoTitle>Praça do Alomorfose</VideoTitle> */}
           <VideoPlayer controls url={video} />

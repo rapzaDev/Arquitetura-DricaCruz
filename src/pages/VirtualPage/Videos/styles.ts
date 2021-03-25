@@ -31,14 +31,28 @@ export const VirtualGroup = styled.div`
 `;
 
 export const VirtualH1 = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #f9eae5;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
   font-family: 'Playfair 700';
-  animation: ${appearFromZ} 2s;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  @media screen and (width: 360px) {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+
+  @media screen and (width: 375px) {
+    font-size: 1.5rem;
+    margin-top: 40px;
+  }
+
+  @media screen and (width: 414px) {
+    font-size: 1.5rem;
     margin-top: 40px;
   }
 `;
@@ -56,18 +70,22 @@ export const VirtualWrapper = styled.div`
 
   @media screen and (max-width: 480px) {
     width: 440px;
+    padding: 0;
   }
 
   @media screen and (width: 360px) {
     width: 360px;
+    padding: 0;
   }
 
   @media screen and (width: 375px) {
     width: 380px;
+    padding: 0;
   }
 
   @media screen and (width: 414px) {
     width: 410px;
+    padding: 0;
   }
 `;
 
