@@ -24,7 +24,6 @@ interface IHero {
 }
 
 interface IHeroData {
-  title: string;
   path: string;
   label: string;
   image: string;
@@ -76,7 +75,6 @@ const Hero: React.FC<IHero> = ({ id }) => {
                   <HeroSlider>
                     <HeroImage src={slide.image} alt={slide.alt} />
                     <HeroContent>
-                      <h1>{slide.title}</h1>
                       <LinkRouter className="linkrouter" to={slide.path}>
                         <Button isPrimary>
                           {slide.label}

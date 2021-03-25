@@ -4,7 +4,6 @@ import ImageThree from '../../../../images/image3.jpg';
 import ImageFour from '../../../../images/image4.jpg';
 
 interface IHeroData {
-  title: string;
   path: string;
   label: string;
   image: string;
@@ -13,30 +12,26 @@ interface IHeroData {
 
 const HeroData: IHeroData[] = [
   {
-    title: 'Luxury Villa in Bali, Indonesia',
     path: '/projetos',
-    label: 'Ver Projeto',
+    label: 'Ver Projetos',
     image: ImageOne,
     alt: 'House',
   },
   {
-    title: 'House in San Jose, Costa Rica',
     path: '/projetos',
-    label: 'Ver Projeto',
+    label: 'Ver Projetos',
     image: ImageTwo,
     alt: 'House',
   },
   {
-    title: 'House in Calabasas, California',
     path: '/projetos',
-    label: 'Ver Projeto',
+    label: 'Ver Projetos',
     image: ImageThree,
     alt: 'House',
   },
   {
-    title: 'House in Houston, Texas',
     path: '/projetos',
-    label: 'Ver Projeto',
+    label: 'Ver Projetos',
     image: ImageFour,
     alt: 'House',
   },
