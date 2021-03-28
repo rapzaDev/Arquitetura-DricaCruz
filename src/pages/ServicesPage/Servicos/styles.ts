@@ -39,6 +39,21 @@ export const ServicesH1 = styled.h1`
     font-size: 2rem;
     margin-top: 40px;
   }
+
+  @media screen and (width: 360px) {
+    font-size: 2rem;
+    margin-top: 170px;
+  }
+
+  @media screen and (width: 375px) {
+    font-size: 2rem;
+    margin-top: 170px;
+  }
+
+  @media screen and (width: 414px) {
+    font-size: 2rem;
+    margin-top: 170px;
+  }
 `;
 
 export const ServicesWrapper = styled.div`

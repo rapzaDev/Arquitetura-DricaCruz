@@ -75,7 +75,11 @@ const Hero: React.FC<IHero> = ({ id }) => {
                   <HeroSlider>
                     <HeroImage src={slide.image} alt={slide.alt} />
                     <HeroContent>
-                      <LinkRouter className="linkrouter" to={slide.path}>
+                      <LinkRouter
+                        className="linkrouter"
+                        href={slide.path}
+                        target="_blank"
+                      >
                         <Button isPrimary>
                           {slide.label}
                           <Arrow />

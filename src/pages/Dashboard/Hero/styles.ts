@@ -5,7 +5,6 @@ import {
   IoMdArrowForward,
 } from 'react-icons/io';
 import { shade } from 'polished';
-import { Link as LinkR } from 'react-router-dom';
 
 interface IHeroProps {
   id: string;
@@ -121,7 +120,7 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const LinkRouter = styled(LinkR)``;
+export const LinkRouter = styled.a``;
 
 export const Arrow = styled(IoMdArrowRoundForward)`
   margin-left: 0.5rem;

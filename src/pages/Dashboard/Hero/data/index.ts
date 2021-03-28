@@ -12,25 +12,25 @@ interface IHeroData {
 
 const HeroData: IHeroData[] = [
   {
-    path: '/projetos',
+    path: 'https://www.instagram.com/arquitetura.drielicruz/',
     label: 'Ver Projetos',
     image: ImageOne,
     alt: 'House',
   },
   {
-    path: '/projetos',
+    path: 'https://www.instagram.com/arquitetura.drielicruz/',
     label: 'Ver Projetos',
     image: ImageTwo,
     alt: 'House',
   },
   {
-    path: '/projetos',
+    path: 'https://www.instagram.com/arquitetura.drielicruz/',
     label: 'Ver Projetos',
     image: ImageThree,
     alt: 'House',
   },
   {
-    path: '/projetos',
+    path: 'https://www.instagram.com/arquitetura.drielicruz/',
     label: 'Ver Projetos',
     image: ImageFour,
     alt: 'House',
