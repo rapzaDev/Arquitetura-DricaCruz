@@ -47,7 +47,7 @@ const Hero: React.FC<IHero> = ({ id }) => {
       );
     };
 
-    const timeoutNext = setTimeout(nextSlide, 3000);
+    const timeoutNext = setTimeout(nextSlide, 5000);
 
     return () => {
       if (timeoutNext) {
@@ -70,10 +70,14 @@ const Hero: React.FC<IHero> = ({ id }) => {
         <HeroWrapper>
           {data.map((slide, index) => {
             return (
-              <HeroSlide key={index}>
+              <HeroSlide key={slide.image}>
                 {index === current && (
                   <HeroSlider>
-                    <HeroImage src={slide.image} alt={slide.alt} />
+                    <HeroImage
+                      src={slide.image}
+                      alt={slide.alt}
+                      effect="blur"
+                    />
                     <HeroContent>
                       <LinkRouter
                         className="linkrouter"

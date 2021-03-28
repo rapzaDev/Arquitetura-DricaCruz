@@ -1,10 +1,22 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import {
   IoMdArrowRoundForward,
   IoMdArrowBack,
   IoMdArrowForward,
 } from 'react-icons/io';
 import { shade } from 'polished';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+const appearFromZ = keyframes`
+  from {
+    opacity: 0;
+    transform: translateZ(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+`;
 
 interface IHeroProps {
   id: string;
@@ -65,13 +77,14 @@ export const HeroSlider = styled.div`
   }
 `;
 
-export const HeroImage = styled.img`
+export const HeroImage = styled(LazyLoadImage)`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  animation: ${appearFromZ} 2.5s;
+  /* object-fit: cover; */
 `;
 
 export const HeroContainer = styled.div`
