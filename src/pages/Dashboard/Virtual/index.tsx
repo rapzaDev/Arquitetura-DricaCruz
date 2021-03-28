@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../../../components/Button';
 
 import {
   InfoContainer,
@@ -10,8 +9,6 @@ import {
   TextWrapper,
   TopLine,
   Subtitle,
-  BtnWrap,
-  ButtonLinkR,
   ImgWrap,
   Img,
 } from './styles';
@@ -53,14 +50,6 @@ const Virtual: React.FC<IVirtual> = ({
                 <TopLine>{topLine}</TopLine>
                 <Subtitle darkText={darkText}>{paragraph1}</Subtitle>
                 <Subtitle darkText={darkText}>{paragraph2}</Subtitle>
-
-                <BtnWrap>
-                  <ButtonLinkR to="/virtual">
-                    <Button isBig isPrimary>
-                      Realidade Virtual
-                    </Button>
-                  </ButtonLinkR>
-                </BtnWrap>
               </TextWrapper>
             </Column1>
             <Column2>

@@ -84,7 +84,7 @@ export const HeroImage = styled(LazyLoadImage)`
   width: 100%;
   height: 100%;
   animation: ${appearFromZ} 2.5s;
-  /* object-fit: cover; */
+  object-fit: cover;
 `;
 
 export const HeroContainer = styled.div`
