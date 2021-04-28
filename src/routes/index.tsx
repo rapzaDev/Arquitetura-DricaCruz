@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 
 import Dashboard from '../pages/Dashboard';
 import Services from '../pages/ServicesPage';
-// import Virtual from '../pages/VirtualPage';
 
 const Routes: React.FC = () => (
   <Switch>
