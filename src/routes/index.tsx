@@ -8,7 +8,6 @@ const Routes: React.FC = () => (
   <Switch>
     <Route path="/" exact component={Dashboard} />
     <Route path="/services" component={Services} />
-    {/* <Route path="/virtual" component={Virtual} /> */}
   </Switch>
 );
 
