@@ -4,9 +4,6 @@
 
 <p>Here is the website application in React JS:</p>
 
- <video width="720" height="440" controls>
-  <source src="src/videos/DricaCruzArqPortfolio.mp4" type="video/mp4">
-</video> 
-
+https://user-images.githubusercontent.com/68792232/152584160-23b3f366-c485-444a-a013-be4357b5826c.mp4
 
 <p>You can visit the site clicking on this link: <a href="https://drielicruz-arquitetura.vercel.app/">Click here</a> </p> 
